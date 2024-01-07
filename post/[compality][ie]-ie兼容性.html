@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>IE Broswer、Modern Broswer 兼容性问题 | JyLie</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/idea-domain/favicon.ico">
+    <meta name="description" content="Code my dream!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/idea-domain/assets/css/0.styles.2c36a006.css" as="style"><link rel="preload" href="/idea-domain/assets/js/app.89376c8e.js" as="script"><link rel="preload" href="/idea-domain/assets/js/4.5465c98c.js" as="script"><link rel="preload" href="/idea-domain/assets/js/1.4d4f02de.js" as="script"><link rel="preload" href="/idea-domain/assets/js/26.08b284c3.js" as="script"><link rel="prefetch" href="/idea-domain/assets/js/10.a2352b9f.js"><link rel="prefetch" href="/idea-domain/assets/js/11.c25da6a4.js"><link rel="prefetch" href="/idea-domain/assets/js/12.4b9a78a0.js"><link rel="prefetch" href="/idea-domain/assets/js/13.4baadb5a.js"><link rel="prefetch" href="/idea-domain/assets/js/14.185a9a02.js"><link rel="prefetch" href="/idea-domain/assets/js/15.9636a8ca.js"><link rel="prefetch" href="/idea-domain/assets/js/16.679932b8.js"><link rel="prefetch" href="/idea-domain/assets/js/17.dd32ab06.js"><link rel="prefetch" href="/idea-domain/assets/js/18.32b1cf56.js"><link rel="prefetch" href="/idea-domain/assets/js/19.a56920af.js"><link rel="prefetch" href="/idea-domain/assets/js/20.438036b2.js"><link rel="prefetch" href="/idea-domain/assets/js/21.16413d4b.js"><link rel="prefetch" href="/idea-domain/assets/js/22.0e53dc4f.js"><link rel="prefetch" href="/idea-domain/assets/js/23.1fbc2526.js"><link rel="prefetch" href="/idea-domain/assets/js/24.84de9b18.js"><link rel="prefetch" href="/idea-domain/assets/js/25.d8f5fb42.js"><link rel="prefetch" href="/idea-domain/assets/js/27.fc88097b.js"><link rel="prefetch" href="/idea-domain/assets/js/28.0e86cd67.js"><link rel="prefetch" href="/idea-domain/assets/js/29.14a3a251.js"><link rel="prefetch" href="/idea-domain/assets/js/30.380fd044.js"><link rel="prefetch" href="/idea-domain/assets/js/31.2159b398.js"><link rel="prefetch" href="/idea-domain/assets/js/32.9fd1bac0.js"><link rel="prefetch" href="/idea-domain/assets/js/33.66deed1e.js"><link rel="prefetch" href="/idea-domain/assets/js/34.660bbe89.js"><link rel="prefetch" href="/idea-domain/assets/js/35.d6613fc9.js"><link rel="prefetch" href="/idea-domain/assets/js/36.5debaab7.js"><link rel="prefetch" href="/idea-domain/assets/js/37.baea05f8.js"><link rel="prefetch" href="/idea-domain/assets/js/38.b12b93d9.js"><link rel="prefetch" href="/idea-domain/assets/js/39.881b30e0.js"><link rel="prefetch" href="/idea-domain/assets/js/40.c5906ef8.js"><link rel="prefetch" href="/idea-domain/assets/js/41.314b3f1d.js"><link rel="prefetch" href="/idea-domain/assets/js/42.b3e6177b.js"><link rel="prefetch" href="/idea-domain/assets/js/43.05e57135.js"><link rel="prefetch" href="/idea-domain/assets/js/44.decce320.js"><link rel="prefetch" href="/idea-domain/assets/js/45.92f9fb7a.js"><link rel="prefetch" href="/idea-domain/assets/js/46.d9fd684f.js"><link rel="prefetch" href="/idea-domain/assets/js/47.46b7b146.js"><link rel="prefetch" href="/idea-domain/assets/js/48.4ac11cbd.js"><link rel="prefetch" href="/idea-domain/assets/js/49.73378ba2.js"><link rel="prefetch" href="/idea-domain/assets/js/5.0b75201a.js"><link rel="prefetch" href="/idea-domain/assets/js/50.1a6b9738.js"><link rel="prefetch" href="/idea-domain/assets/js/51.70dbe9ec.js"><link rel="prefetch" href="/idea-domain/assets/js/52.1743641c.js"><link rel="prefetch" href="/idea-domain/assets/js/53.88c57e85.js"><link rel="prefetch" href="/idea-domain/assets/js/54.8df6ccd2.js"><link rel="prefetch" href="/idea-domain/assets/js/55.7958b607.js"><link rel="prefetch" href="/idea-domain/assets/js/56.cfd57e97.js"><link rel="prefetch" href="/idea-domain/assets/js/57.156cd233.js"><link rel="prefetch" href="/idea-domain/assets/js/58.197d2a8c.js"><link rel="prefetch" href="/idea-domain/assets/js/59.d7a72db1.js"><link rel="prefetch" href="/idea-domain/assets/js/6.1d6b63a7.js"><link rel="prefetch" href="/idea-domain/assets/js/60.c62a4d78.js"><link rel="prefetch" href="/idea-domain/assets/js/61.949370dd.js"><link rel="prefetch" href="/idea-domain/assets/js/62.23a941cc.js"><link rel="prefetch" href="/idea-domain/assets/js/63.65d4a7fe.js"><link rel="prefetch" href="/idea-domain/assets/js/64.7ac5ce1f.js"><link rel="prefetch" href="/idea-domain/assets/js/65.06b31195.js"><link rel="prefetch" href="/idea-domain/assets/js/66.0502d679.js"><link rel="prefetch" href="/idea-domain/assets/js/67.8933a0d7.js"><link rel="prefetch" href="/idea-domain/assets/js/68.b5952168.js"><link rel="prefetch" href="/idea-domain/assets/js/69.5e2c7b6f.js"><link rel="prefetch" href="/idea-domain/assets/js/7.915bfa51.js"><link rel="prefetch" href="/idea-domain/assets/js/70.b1e5fa24.js"><link rel="prefetch" href="/idea-domain/assets/js/71.1f97cb34.js"><link rel="prefetch" href="/idea-domain/assets/js/72.de33eb9f.js"><link rel="prefetch" href="/idea-domain/assets/js/73.b6026198.js"><link rel="prefetch" href="/idea-domain/assets/js/74.36040e8e.js"><link rel="prefetch" href="/idea-domain/assets/js/75.b1ee04bd.js"><link rel="prefetch" href="/idea-domain/assets/js/76.674f3bcb.js"><link rel="prefetch" href="/idea-domain/assets/js/77.2e8d78eb.js"><link rel="prefetch" href="/idea-domain/assets/js/78.6be64fef.js"><link rel="prefetch" href="/idea-domain/assets/js/79.9b118866.js"><link rel="prefetch" href="/idea-domain/assets/js/8.189eb478.js"><link rel="prefetch" href="/idea-domain/assets/js/80.85bb9d6a.js"><link rel="prefetch" href="/idea-domain/assets/js/81.0dab5b76.js"><link rel="prefetch" href="/idea-domain/assets/js/82.428c38c7.js"><link rel="prefetch" href="/idea-domain/assets/js/83.d4455b9e.js"><link rel="prefetch" href="/idea-domain/assets/js/84.02a939e7.js"><link rel="prefetch" href="/idea-domain/assets/js/85.ed694f58.js"><link rel="prefetch" href="/idea-domain/assets/js/86.eeda91b2.js"><link rel="prefetch" href="/idea-domain/assets/js/87.afb850a1.js"><link rel="prefetch" href="/idea-domain/assets/js/9.db2c446c.js"><link rel="prefetch" href="/idea-domain/assets/js/vendors~flowchart.567eafbc.js">
+    <link rel="stylesheet" href="/idea-domain/assets/css/0.styles.2c36a006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5f3f4765><div data-v-5f3f4765><div id="loader-wrapper" class="loading-wrapper" data-v-164600bd data-v-5f3f4765 data-v-5f3f4765><div class="loader-main" data-v-164600bd><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-7c5ab02c data-v-5f3f4765 data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>JyLie</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-5f3f4765><header class="navbar" data-v-5f3f4765><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/idea-domain/" class="home-link router-link-active"><!----> <span class="site-name">JyLie</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5f3f4765></div> <aside class="sidebar" data-v-5f3f4765><div class="personal-info-wrapper" data-v-a30e08ee><img src="/idea-domain/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a30e08ee> <h3 class="name" data-v-a30e08ee>
+    JyLie
+  </h3> <div class="num" data-v-a30e08ee><div data-v-a30e08ee><h3 data-v-a30e08ee>74</h3> <h6 data-v-a30e08ee>Article</h6></div> <div data-v-a30e08ee><h3 data-v-a30e08ee>79</h3> <h6 data-v-a30e08ee>Tag</h6></div></div> <hr data-v-a30e08ee></div> <nav class="nav-links"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>IE Broswer、Modern Broswer 兼容性问题</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#ie-兼容性问题" class="sidebar-link">IE 兼容性问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#运行页面白屏" class="sidebar-link">运行页面白屏</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#报错-typeerror-调用的对象无效" class="sidebar-link">报错 &quot;TypeError: 调用的对象无效</a></li></ul></li><li><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#js" class="sidebar-link">JS</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#bom" class="sidebar-link">BOM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#event" class="sidebar-link">Event</a></li></ul></li><li><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#dom" class="sidebar-link">DOM</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#input-element" class="sidebar-link">input element</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#a-element" class="sidebar-link">a element</a></li></ul></li><li><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#css" class="sidebar-link">css</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#盒子模型" class="sidebar-link">盒子模型</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#flex-布局" class="sidebar-link">flex 布局</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#文本换行" class="sidebar-link">文本换行</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bcompality%5D%5Bie%5D-ie%E5%85%BC%E5%AE%B9%E6%80%A7.html#hack" class="sidebar-link">hack</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-7c5ab02c data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>IE Broswer、Modern Broswer 兼容性问题</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div data-v-5f3f4765><main class="page"><div class="page-title" style="display:none;"><h1>IE Broswer、Modern Broswer 兼容性问题</h1> <hr> <div data-v-2c863f0e><i class="iconfont reco-account" data-v-2c863f0e><span data-v-2c863f0e>JyLie</span></i> <i class="iconfont reco-date" data-v-2c863f0e><span data-v-2c863f0e>2017-01-01</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c863f0e><span class="tag-item" data-v-2c863f0e>ie</span><span class="tag-item" data-v-2c863f0e>兼容性</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>持续更新...</p></blockquote> <p>本文主要总结 IE 相关的兼容性问题，附加现代浏览器兼容</p> <h2 id="ie-兼容性问题"><a href="#ie-兼容性问题" class="header-anchor">#</a> IE 兼容性问题</h2> <h3 id="运行页面白屏"><a href="#运行页面白屏" class="header-anchor">#</a> 运行页面白屏</h3> <p>IE 白屏一般是页面报错引起的，大部分情况是兼容性问题。</p> <p>对于此类问题，先搞个常规排查添加 polyfill 尝试，再来个 babel 将代码编译为 es5，如果仍然报错则需要调试报错源处写法问题。</p> <h3 id="报错-typeerror-调用的对象无效"><a href="#报错-typeerror-调用的对象无效" class="header-anchor">#</a> 报错 &quot;TypeError: 调用的对象无效</h3> <p>出现调用的对象无效，是因为引用了 IE window 上不存在的对象或函数引起的。</p> <p>ie 不支持 es6|es6+的结构类型、函数、对象以及表达式，因此使用时要考虑 polyfill 进行支持，否则会报错。</p> <p>在自己写兼容 polyfill 时要注册 DOM 和 js 相关的结构性、调用方式问题，赋值类型也要注意。如在 IE11 下 判断不存在的函数方法时会报错（不要写!requestAnimationFrame，而要写!window.requestAnimationFrame）</p> <h2 id="js"><a href="#js" class="header-anchor">#</a> JS</h2> <ul><li></li></ul> <h2 id="bom"><a href="#bom" class="header-anchor">#</a> BOM</h2> <h3 id="event"><a href="#event" class="header-anchor">#</a> Event</h3> <ul><li><p>冒泡事件，ie 默认接受冒泡事件 if ( e &amp;&amp; e.stopPropagation ) {e.stopPropagation(); } else {window.event.cancelBubble = true;}</p></li> <li><p>ie10+开始支持 FormData ，且只支持 formData.append(name, value, filename)</p></li> <li><p>ie 下 input 框的 change 事件不能用 enter 键触发，只能用键盘捕捉事件，判断键值是否等于'13'</p></li></ul> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">function</span> <span class="token function">getIsIE</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token operator">!</span>window<span class="token punctuation">[</span><span class="token string">&quot;ActiveXObject&quot;</span><span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token string">&quot;ActiveXObject&quot;</span> <span class="token keyword">in</span> window<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token keyword">else</span> <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  <span class="token comment">// 获取回车键事件 -- 兼容ie</span>
+ <span class="token keyword">const</span> getEnterEvent <span class="token operator">=</span> <span class="token function">getEnterEvent</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+     <span class="token comment">//判断是否是ie浏览器</span>
+     <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">getIsIE</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>keyCode <span class="token operator">==</span> <span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token comment">//注意判断值没有发生变化时不做修改</span>
+
+     <span class="token punctuation">}</span>
+
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h2 id="dom"><a href="#dom" class="header-anchor">#</a> DOM</h2> <h3 id="input-element"><a href="#input-element" class="header-anchor">#</a> input element</h3> <p>IE 下 input 框设置了 readonly 属性，鼠标还是可以点击光标聚焦，因此需要采用 disabled 属性替换使用</p> <h3 id="a-element"><a href="#a-element" class="header-anchor">#</a> a element</h3> <p>a 标签尽量不要在 href 使用<code>javascript:;</code>协议，因为其不仅会导致不必要的触发 window.onbeforeunload 事件，而且在 IE8 中会出现跳转出错的问题。</p> <p>如果就是喜欢使用 <code>javascript:;</code> 则使用<code>javascript:void(0);</code> 替代。</p> <p>替代方案：</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>javascript:void(0);<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment">&lt;!-- 或者 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>#<span class="token punctuation">&quot;</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value javascript language-javascript"><span class="token keyword">return</span> <span class="token boolean">false</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="css"><a href="#css" class="header-anchor">#</a> css</h2> <h3 id="盒子模型"><a href="#盒子模型" class="header-anchor">#</a> 盒子模型</h3> <p>解决 ie 和 modern brower 的盒子模型差异：* {box-sizing: content-box;-moz-box-sizing: inherit;-webkit-box-sizing:inherit;}</p> <h3 id="flex-布局"><a href="#flex-布局" class="header-anchor">#</a> flex 布局</h3> <p>ie11 使用 flex 时，使用 min-height 会导致垂直居中失效，min-width 同理。</p> <h3 id="文本换行"><a href="#文本换行" class="header-anchor">#</a> 文本换行</h3> <p>一行样式：white-space: nowrap ：nowrap 不生效时，添加 word-break: keep-all</p> <h4 id="ie6-双边距"><a href="#ie6-双边距" class="header-anchor">#</a> IE6 双边距</h4> <p>块属性标签添加了浮动 float 之后，若在浮动方向上也有 margin 值，则 margin 值会加倍。其实这种问题主要就是会把某些元素挤到了第二行</p> <p>解决的方式有两个：</p> <ul><li>1.给 float 元素添加 display：inline 即可正常显示</li> <li>2.就是 hack 处理了，对 IE6 进行 _margin-left:5px;</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/css<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">html,
+  body,
+  div</span> <span class="token punctuation">{</span>
+    <span class="token property">margin</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">padding</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.wrap</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #333<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.box</span> <span class="token punctuation">{</span>
+    <span class="token property">float</span><span class="token punctuation">:</span> left<span class="token punctuation">;</span>
+    <span class="token property">display</span><span class="token punctuation">:</span> inline<span class="token punctuation">;</span>
+    <span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 80px<span class="token punctuation">;</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>wrap<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>text/javascript<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br></div></div><p>行内属性标签，为了设置宽高，我们经常就会设置成 display：block; 这样一来就产生上述的问题。</p> <p>解决办法 display：inline; 但是这样一来我们就不能设置宽高了，所以呢需要再加个 display:table.</p> <p>所以你设置 display:block 后，再添上 display:inline 和 display:table</p> <h4 id="上下-margin-重合问题"><a href="#上下-margin-重合问题" class="header-anchor">#</a> 上下 margin 重合问题</h4> <p>相邻的两个 div margin-left margin-right 不会重合，但相邻的 margin-top margin-bottom 会重合。</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">.box1</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 200px<span class="token punctuation">;</span>
+    <span class="token property">border</span><span class="token punctuation">:</span> 1px solid #333<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.mt</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">.mb</span> <span class="token punctuation">{</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box1 mb<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>box1 mt<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><h4 id="标签属性-min-height-是不兼容的"><a href="#标签属性-min-height-是不兼容的" class="header-anchor">#</a> 标签属性 min-height 是不兼容的</h4> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.box</span> <span class="token punctuation">{</span>
+  <span class="token property">min-height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> auto <span class="token important">!important</span><span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+  <span class="token property">overflow</span><span class="token punctuation">:</span> visible<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="超链接访问过后样式混乱，hover-样式不出现了"><a href="#超链接访问过后样式混乱，hover-样式不出现了" class="header-anchor">#</a> 超链接访问过后样式混乱，hover 样式不出现了</h4> <p>其实主要是其 CSS 属性的排序问题</p> <p>最好按照这个顺序：L-V-H-A</p> <p>简单的记法是 love hate</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">a:link</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token selector">a:visited</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token selector">a:hover</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+<span class="token selector">a:active</span> <span class="token punctuation">{</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h4 id="_12px-文本"><a href="#_12px-文本" class="header-anchor">#</a> 12px 文本</h4> <p>chrome 下默认会将小于 12px 的文本强制按照 12px 来解析。</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token property">-webkit-text-size-adjust</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="png-图片"><a href="#png-图片" class="header-anchor">#</a> png 图片</h4> <p>png24 位的图片在 IE6 下面会出现背景，所以最好还是使用 png8 格式的</p> <h4 id="鼠标的手势"><a href="#鼠标的手势" class="header-anchor">#</a> 鼠标的手势</h4> <p>FireFox 的 cursor 属性不支持 hand，但是支持 pointer，</p> <p>IE 两个都支持；所以为了兼容都用 pointer</p> <h4 id="消除-ul、ol-等列表的缩进"><a href="#消除-ul、ol-等列表的缩进" class="header-anchor">#</a> 消除 ul、ol 等列表的缩进</h4> <p>其中 margin 属性对 IE 有效，padding 属性对 FireFox 有效</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.ulol</span> <span class="token punctuation">{</span>
+  <span class="token property">list-style</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+  <span class="token property">margin</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+  <span class="token property">padding</span><span class="token punctuation">:</span> 0px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="css-透明度"><a href="#css-透明度" class="header-anchor">#</a> CSS 透明度</h4> <ul><li><p>一般就直接 opacity: 0.6 ;</p></li> <li><p>IE 就 filter: alpha(opacity=60);</p></li> <li><p>IE6 下 filter:progid:DXImageTransform.Microsoft.Alpha(style=0,opacity=60);</p></li></ul> <div class="language-scss line-numbers-mode"><pre class="language-scss"><code><span class="token keyword">@mixin</span> <span class="token function">opacity</span><span class="token punctuation">(</span><span class="token property">n</span><span class="token punctuation">:</span> 1<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token property">opacity</span><span class="token punctuation">:</span> n<span class="token punctuation">;</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">alpha</span><span class="token punctuation">(</span>opacity=n <span class="token operator">*</span> 100<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token property">progid</span><span class="token punctuation">:</span>DXImageTransform.Microsoft.<span class="token function">Alpha</span><span class="token punctuation">(</span>style=0<span class="token punctuation">,</span>opacity=n <span class="token operator">*</span> 100<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h4 id="ff-和-ie6-下面图片间隙"><a href="#ff-和-ie6-下面图片间隙" class="header-anchor">#</a> FF 和 IE6 下面图片间隙</h4> <p>有些时候图片下方会出现一条间隙</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>1.jpg<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+  <span class="token selector">img</span> <span class="token punctuation">{</span>
+    <span class="token property">verticle-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="高度问题"><a href="#高度问题" class="header-anchor">#</a> 高度问题</h4> <p>IE6 下 div 高度无法小于 10px</p> <p>比如定义一条高 2px 的线条，FF 和 IE7 都正常</p> <p>但 IE6 就是 10px</p> <p>解决的办法有两种：</p> <ul><li>添加 overflow 属性</li> <li>设置 fontsize 大小为高度大小</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">height</span><span class="token punctuation">:</span>2px<span class="token punctuation">;</span><span class="token property">overflow</span><span class="token punctuation">:</span>hidden<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span>#000000<span class="token punctuation">;</span><span class="token property">width</span><span class="token punctuation">:</span>778px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token special-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span><span class="token value css language-css"><span class="token property">height</span><span class="token punctuation">:</span>2px<span class="token punctuation">;</span><span class="token property">font-size</span><span class="token punctuation">:</span>2px<span class="token punctuation">;</span><span class="token property">background</span><span class="token punctuation">:</span>#000000<span class="token punctuation">;</span><span class="token property">width</span><span class="token punctuation">:</span>778px<span class="token punctuation">;</span></span><span class="token punctuation">&quot;</span></span></span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="&amp;nbps;">&amp;nbps;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="不兼容-transform"><a href="#不兼容-transform" class="header-anchor">#</a> 不兼容 transform</h4> <p>使用 filter 的 Matrix（矩阵）</p> <h4 id="不兼容-border-radius"><a href="#不兼容-border-radius" class="header-anchor">#</a> 不兼容 border-radius</h4> <p>推荐用背景图代替</p> <h4 id="不兼容-text-overflow"><a href="#不兼容-text-overflow" class="header-anchor">#</a> 不兼容 text-overflow</h4> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span>
+<span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h3 id="hack"><a href="#hack" class="header-anchor">#</a> hack</h3> <p>在 Web 页面制作中尽量不要使用 CSS Hack 来处理兼容问题。因为任何浏览器下出现渲染不一致都极有可能是我们自己的结构或样式不符合 W3C 的某些要求，或者说违背了浏览器的某些规则而造成的，所以我们应该尽量通过结构或 CSS 的修改来达到各浏览器渲染一致效果，除非到了万不得已情况下，才考虑 CSS 的 Hack。</p> <h4 id="css-类内属性前缀法："><a href="#css-类内属性前缀法：" class="header-anchor">#</a> css 类内属性前缀法：</h4> <p>css 类内属性前缀法，即在 CSS 样式属性名前加上一些只有特定浏览器才能识别的 hack 前缀，以达到预期的页面展现效果。比如 _ 可以被 IE6/IE7 识别，但 _ 只能被 IE6 识别，IE6-IE10 都可以识别 &quot;\9&quot;，IE6 不能识别!important  FireFox 不能识别 _ _  \9</p> <p>规则说明：在标准模式中</p> <ul><li>“-″减号是 IE6 专有的 hack</li> <li>“\9″ IE6/IE7/IE8/IE9/IE10 都生效</li> <li>“\0″ IE8/IE9/IE10 都生效，是 IE8/9/10 的 hack</li> <li>“\9\0″ 只对 IE9/IE10 生效，是 IE9/10 的 hack</li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.type</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #111<span class="token punctuation">;</span> <span class="token comment">/* all */</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #222\9<span class="token punctuation">;</span> <span class="token comment">/* IE */</span>
+  *<span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span> <span class="token comment">/* IE6/IE7 */</span>
+  <span class="token property">_color</span><span class="token punctuation">:</span> #444<span class="token punctuation">;</span> <span class="token comment">/* IE6 */</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.hack</span> <span class="token punctuation">{</span>
+  <span class="token comment">/*demo1 */</span>
+  <span class="token comment">/*demo1 注意顺序，否则IE6/7下可能无法正确显示，导致结果显示为白色背景*/</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment">/* All browsers */</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> blue <span class="token important">!important</span><span class="token punctuation">;</span> <span class="token comment">/* All browsers but IE6 */</span>
+  *<span class="token property">background-color</span><span class="token punctuation">:</span> black<span class="token punctuation">;</span> <span class="token comment">/* IE6, IE7 */</span>
+  +<span class="token property">background-color</span><span class="token punctuation">:</span> yellow<span class="token punctuation">;</span> <span class="token comment">/* IE6, IE7*/</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> gray\9<span class="token punctuation">;</span> <span class="token comment">/* IE6, IE7, IE8, IE9, IE10 */</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> purple\0<span class="token punctuation">;</span> <span class="token comment">/* IE8, IE9, IE10 */</span>
+  <span class="token property">background-color</span><span class="token punctuation">:</span> orange\9\0<span class="token punctuation">;</span> <span class="token comment">/*IE9, IE10*/</span>
+  <span class="token property">_background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span> <span class="token comment">/* Only works in IE6 */</span>
+  *+<span class="token property">background-color</span><span class="token punctuation">:</span> pink<span class="token punctuation">;</span> <span class="token comment">/*  WARNING: Only works in IE7 ? Is it right? */</span>
+<span class="token punctuation">}</span>
+
+<span class="token comment">/*可以通过javascript检测IE10，然后给IE10的&lt;html&gt;标签加上class=”ie10″ 这个类 */</span>
+<span class="token selector">.ie10 #hack</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> red<span class="token punctuation">;</span> <span class="token comment">/* Only works in IE10 */</span>
+<span class="token punctuation">}</span>
+
+<span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.hacktest</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> black\0<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">/*opera*/</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">min-width</span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.hacktest</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> purple\9<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">/*  for IE9/IE10  PS:国外有些习惯常写作\0，根本没考虑Opera也认识\0的实际 */</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">-ms-high-contrast</span><span class="token punctuation">:</span> active<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token property">-ms-high-contrast</span><span class="token punctuation">:</span> none<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.hacktest</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> green<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token comment">/* for IE10+ 此写法可以适配到高对比度和默认模式，故可覆盖所有ie10的模式 */</span>
+<span class="token punctuation">}</span>
+<span class="token atrule"><span class="token rule">@media</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">-webkit-min-device-pixel-ratio</span><span class="token punctuation">:</span> 0<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+  <span class="token selector">.hacktest</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> gray<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span> <span class="token comment">/*for Chrome/Safari*/</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br></div></div><h4 id="条件注释法-html-引用外部文件"><a href="#条件注释法-html-引用外部文件" class="header-anchor">#</a> 条件注释法: html 引用外部文件</h4> <p>IE 条件注释法，即在正常代码之外添加判别 IE 浏览器或对应版本的条件注释，符合条件的浏览器或者版本号才回执行里边的代码。</p> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token comment">&lt;!--[if IE 6]&gt;
+  &lt;link href=&quot;ie/ie6.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;![endif]--&gt;</span>
+<span class="token comment">&lt;!--[if IE 9]&gt;
+  &lt;link href=&quot;ie/ie9.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;![endif]--&gt;</span>
+<span class="token comment">&lt;!--[if IE 8]&gt;
+  &lt;link href=&quot;ie/ie8.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;![endif]--&gt;</span>
+<span class="token comment">&lt;!--[if IE 7]&gt;
+  &lt;link href=&quot;ie/ie7.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;![endif]--&gt;</span>
+<span class="token comment">&lt;!--[if IE]&gt;
+  &lt;link href=&quot;ie/ie.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot; /&gt;
+&lt;![endif]--&gt;</span>
+<span class="token comment">&lt;!--[if lt IE 9]&gt;
+  &lt;script src=&quot;html5_shrrr.js&quot;&gt;&lt;/script&gt;
+&lt;![endif]--&gt;</span>
+
+<span class="token comment">&lt;!--[if !IE]&gt;
+  这段文字只在非IE浏览器显示
+&lt;![endif]--&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><ul><li>Firefox</li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code></code></pre> <div class="line-numbers-wrapper"></div></div><ul><li>Firefox</li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code></code></pre> <div class="line-numbers-wrapper"></div></div><ul><li>Firefox</li></ul> <div class="language-css line-numbers-mode"><pre class="language-css"><code></code></pre> <div class="line-numbers-wrapper"></div></div><h1 id="参考文档"><a href="#参考文档" class="header-anchor">#</a> 参考文档</h1> <p><a href="https://blog.csdn.net/freshlover/article/details/12132801" target="_blank" rel="noopener noreferrer">ie 兼容<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a936bdb4 data-v-a936bdb4><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a936bdb4><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a936bdb4></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a936bdb4></path></svg></div><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:130px;height:290px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="130" height="290" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:130px;height:290px;"></canvas></div></div></div>
+    <script src="/idea-domain/assets/js/app.89376c8e.js" defer></script><script src="/idea-domain/assets/js/4.5465c98c.js" defer></script><script src="/idea-domain/assets/js/1.4d4f02de.js" defer></script><script src="/idea-domain/assets/js/26.08b284c3.js" defer></script>
+  </body>
+</html>

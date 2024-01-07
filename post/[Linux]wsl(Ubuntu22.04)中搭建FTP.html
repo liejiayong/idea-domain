@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>wsl(Ubuntu22.04)中搭建FTP | JyLie</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/idea-domain/favicon.ico">
+    <meta name="description" content="Code my dream!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/idea-domain/assets/css/0.styles.2c36a006.css" as="style"><link rel="preload" href="/idea-domain/assets/js/app.89376c8e.js" as="script"><link rel="preload" href="/idea-domain/assets/js/4.5465c98c.js" as="script"><link rel="preload" href="/idea-domain/assets/js/1.4d4f02de.js" as="script"><link rel="preload" href="/idea-domain/assets/js/16.679932b8.js" as="script"><link rel="prefetch" href="/idea-domain/assets/js/10.a2352b9f.js"><link rel="prefetch" href="/idea-domain/assets/js/11.c25da6a4.js"><link rel="prefetch" href="/idea-domain/assets/js/12.4b9a78a0.js"><link rel="prefetch" href="/idea-domain/assets/js/13.4baadb5a.js"><link rel="prefetch" href="/idea-domain/assets/js/14.185a9a02.js"><link rel="prefetch" href="/idea-domain/assets/js/15.9636a8ca.js"><link rel="prefetch" href="/idea-domain/assets/js/17.dd32ab06.js"><link rel="prefetch" href="/idea-domain/assets/js/18.32b1cf56.js"><link rel="prefetch" href="/idea-domain/assets/js/19.a56920af.js"><link rel="prefetch" href="/idea-domain/assets/js/20.438036b2.js"><link rel="prefetch" href="/idea-domain/assets/js/21.16413d4b.js"><link rel="prefetch" href="/idea-domain/assets/js/22.0e53dc4f.js"><link rel="prefetch" href="/idea-domain/assets/js/23.1fbc2526.js"><link rel="prefetch" href="/idea-domain/assets/js/24.84de9b18.js"><link rel="prefetch" href="/idea-domain/assets/js/25.d8f5fb42.js"><link rel="prefetch" href="/idea-domain/assets/js/26.08b284c3.js"><link rel="prefetch" href="/idea-domain/assets/js/27.fc88097b.js"><link rel="prefetch" href="/idea-domain/assets/js/28.0e86cd67.js"><link rel="prefetch" href="/idea-domain/assets/js/29.14a3a251.js"><link rel="prefetch" href="/idea-domain/assets/js/30.380fd044.js"><link rel="prefetch" href="/idea-domain/assets/js/31.2159b398.js"><link rel="prefetch" href="/idea-domain/assets/js/32.9fd1bac0.js"><link rel="prefetch" href="/idea-domain/assets/js/33.66deed1e.js"><link rel="prefetch" href="/idea-domain/assets/js/34.660bbe89.js"><link rel="prefetch" href="/idea-domain/assets/js/35.d6613fc9.js"><link rel="prefetch" href="/idea-domain/assets/js/36.5debaab7.js"><link rel="prefetch" href="/idea-domain/assets/js/37.baea05f8.js"><link rel="prefetch" href="/idea-domain/assets/js/38.b12b93d9.js"><link rel="prefetch" href="/idea-domain/assets/js/39.881b30e0.js"><link rel="prefetch" href="/idea-domain/assets/js/40.c5906ef8.js"><link rel="prefetch" href="/idea-domain/assets/js/41.314b3f1d.js"><link rel="prefetch" href="/idea-domain/assets/js/42.b3e6177b.js"><link rel="prefetch" href="/idea-domain/assets/js/43.05e57135.js"><link rel="prefetch" href="/idea-domain/assets/js/44.decce320.js"><link rel="prefetch" href="/idea-domain/assets/js/45.92f9fb7a.js"><link rel="prefetch" href="/idea-domain/assets/js/46.d9fd684f.js"><link rel="prefetch" href="/idea-domain/assets/js/47.46b7b146.js"><link rel="prefetch" href="/idea-domain/assets/js/48.4ac11cbd.js"><link rel="prefetch" href="/idea-domain/assets/js/49.73378ba2.js"><link rel="prefetch" href="/idea-domain/assets/js/5.0b75201a.js"><link rel="prefetch" href="/idea-domain/assets/js/50.1a6b9738.js"><link rel="prefetch" href="/idea-domain/assets/js/51.70dbe9ec.js"><link rel="prefetch" href="/idea-domain/assets/js/52.1743641c.js"><link rel="prefetch" href="/idea-domain/assets/js/53.88c57e85.js"><link rel="prefetch" href="/idea-domain/assets/js/54.8df6ccd2.js"><link rel="prefetch" href="/idea-domain/assets/js/55.7958b607.js"><link rel="prefetch" href="/idea-domain/assets/js/56.cfd57e97.js"><link rel="prefetch" href="/idea-domain/assets/js/57.156cd233.js"><link rel="prefetch" href="/idea-domain/assets/js/58.197d2a8c.js"><link rel="prefetch" href="/idea-domain/assets/js/59.d7a72db1.js"><link rel="prefetch" href="/idea-domain/assets/js/6.1d6b63a7.js"><link rel="prefetch" href="/idea-domain/assets/js/60.c62a4d78.js"><link rel="prefetch" href="/idea-domain/assets/js/61.949370dd.js"><link rel="prefetch" href="/idea-domain/assets/js/62.23a941cc.js"><link rel="prefetch" href="/idea-domain/assets/js/63.65d4a7fe.js"><link rel="prefetch" href="/idea-domain/assets/js/64.7ac5ce1f.js"><link rel="prefetch" href="/idea-domain/assets/js/65.06b31195.js"><link rel="prefetch" href="/idea-domain/assets/js/66.0502d679.js"><link rel="prefetch" href="/idea-domain/assets/js/67.8933a0d7.js"><link rel="prefetch" href="/idea-domain/assets/js/68.b5952168.js"><link rel="prefetch" href="/idea-domain/assets/js/69.5e2c7b6f.js"><link rel="prefetch" href="/idea-domain/assets/js/7.915bfa51.js"><link rel="prefetch" href="/idea-domain/assets/js/70.b1e5fa24.js"><link rel="prefetch" href="/idea-domain/assets/js/71.1f97cb34.js"><link rel="prefetch" href="/idea-domain/assets/js/72.de33eb9f.js"><link rel="prefetch" href="/idea-domain/assets/js/73.b6026198.js"><link rel="prefetch" href="/idea-domain/assets/js/74.36040e8e.js"><link rel="prefetch" href="/idea-domain/assets/js/75.b1ee04bd.js"><link rel="prefetch" href="/idea-domain/assets/js/76.674f3bcb.js"><link rel="prefetch" href="/idea-domain/assets/js/77.2e8d78eb.js"><link rel="prefetch" href="/idea-domain/assets/js/78.6be64fef.js"><link rel="prefetch" href="/idea-domain/assets/js/79.9b118866.js"><link rel="prefetch" href="/idea-domain/assets/js/8.189eb478.js"><link rel="prefetch" href="/idea-domain/assets/js/80.85bb9d6a.js"><link rel="prefetch" href="/idea-domain/assets/js/81.0dab5b76.js"><link rel="prefetch" href="/idea-domain/assets/js/82.428c38c7.js"><link rel="prefetch" href="/idea-domain/assets/js/83.d4455b9e.js"><link rel="prefetch" href="/idea-domain/assets/js/84.02a939e7.js"><link rel="prefetch" href="/idea-domain/assets/js/85.ed694f58.js"><link rel="prefetch" href="/idea-domain/assets/js/86.eeda91b2.js"><link rel="prefetch" href="/idea-domain/assets/js/87.afb850a1.js"><link rel="prefetch" href="/idea-domain/assets/js/9.db2c446c.js"><link rel="prefetch" href="/idea-domain/assets/js/vendors~flowchart.567eafbc.js">
+    <link rel="stylesheet" href="/idea-domain/assets/css/0.styles.2c36a006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5f3f4765><div data-v-5f3f4765><div id="loader-wrapper" class="loading-wrapper" data-v-164600bd data-v-5f3f4765 data-v-5f3f4765><div class="loader-main" data-v-164600bd><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-7c5ab02c data-v-5f3f4765 data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>JyLie</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-5f3f4765><header class="navbar" data-v-5f3f4765><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/idea-domain/" class="home-link router-link-active"><!----> <span class="site-name">JyLie</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5f3f4765></div> <aside class="sidebar" data-v-5f3f4765><div class="personal-info-wrapper" data-v-a30e08ee><img src="/idea-domain/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a30e08ee> <h3 class="name" data-v-a30e08ee>
+    JyLie
+  </h3> <div class="num" data-v-a30e08ee><div data-v-a30e08ee><h3 data-v-a30e08ee>74</h3> <h6 data-v-a30e08ee>Article</h6></div> <div data-v-a30e08ee><h3 data-v-a30e08ee>79</h3> <h6 data-v-a30e08ee>Tag</h6></div></div> <hr data-v-a30e08ee></div> <nav class="nav-links"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>wsl(Ubuntu22.04)中搭建FTP</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/idea-domain/post/%5BLinux%5Dwsl(Ubuntu22.04)%E4%B8%AD%E6%90%AD%E5%BB%BAFTP.html#安装-vsftpd" class="sidebar-link">安装 vsftpd</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BLinux%5Dwsl(Ubuntu22.04)%E4%B8%AD%E6%90%AD%E5%BB%BAFTP.html#配置-vsftpd" class="sidebar-link">配置 vsftpd</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BLinux%5Dwsl(Ubuntu22.04)%E4%B8%AD%E6%90%AD%E5%BB%BAFTP.html#创建用于-ftp-访问的用户" class="sidebar-link">创建用于 ftp 访问的用户</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BLinux%5Dwsl(Ubuntu22.04)%E4%B8%AD%E6%90%AD%E5%BB%BAFTP.html#获取-linux-ip-的方法" class="sidebar-link">获取 Linux IP 的方法</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BLinux%5Dwsl(Ubuntu22.04)%E4%B8%AD%E6%90%AD%E5%BB%BAFTP.html#window-ftp-连接-linux" class="sidebar-link">Window FTP 连接 Linux</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-7c5ab02c data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>wsl(Ubuntu22.04)中搭建FTP</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div data-v-5f3f4765><main class="page"><div class="page-title" style="display:none;"><h1>wsl(Ubuntu22.04)中搭建FTP</h1> <hr> <div data-v-2c863f0e><i class="iconfont reco-account" data-v-2c863f0e><span data-v-2c863f0e>JyLie</span></i> <i class="iconfont reco-date" data-v-2c863f0e><span data-v-2c863f0e>2023-12-22</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c863f0e><span class="tag-item" data-v-2c863f0e>linux</span><span class="tag-item" data-v-2c863f0e>ftp</span></i></div></div> <div class="content__default"><div class="language- line-numbers-mode"><pre class="language-text"><code>终端版本
+Distributor ID: Ubuntu
+Description:    Ubuntu 22.04.2 LTS
+Release:        22.04
+Codename:       jammy
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><h1 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h1> <p>服务器与开发环境文件传输是常规操作了，随着 Window 对 Linux 的支持越来越密切，熟悉 WSL 是刻不容缓的事情，那么现在就来搭建个 FTP 吧。</p> <h2 id="安装-vsftpd"><a href="#安装-vsftpd" class="header-anchor">#</a> 安装 vsftpd</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> vsftpd
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="配置-vsftpd"><a href="#配置-vsftpd" class="header-anchor">#</a> 配置 vsftpd</h2> <p>接着在修改配置文件为如下，保持退出即可。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">vim</span> /etc/vsftpd.conf
+
+<span class="token assign-left variable">listen</span><span class="token operator">=</span>NO
+<span class="token assign-left variable">listen_ipv6</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">anonymous_enable</span><span class="token operator">=</span>NO
+<span class="token assign-left variable">local_enable</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">write_enable</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">local_umask</span><span class="token operator">=</span>022
+<span class="token assign-left variable">dirmessage_enable</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">use_localtime</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">xferlog_enable</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">connect_from_port_20</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">chroot_local_user</span><span class="token operator">=</span>YES
+<span class="token assign-left variable">secure_chroot_dir</span><span class="token operator">=</span>/var/run/vsftpd/empty
+<span class="token assign-left variable">pam_service_name</span><span class="token operator">=</span>vsftpd
+<span class="token assign-left variable">rsa_cert_file</span><span class="token operator">=</span>/etc/ssl/certs/ssl-cert-snakeoil.pem
+<span class="token assign-left variable">rsa_private_key_file</span><span class="token operator">=</span>/etc/ssl/private/ssl-cert-snakeoil.key
+<span class="token assign-left variable">ssl_enable</span><span class="token operator">=</span>NO
+<span class="token assign-left variable">pasv_enable</span><span class="token operator">=</span>Yes
+<span class="token assign-left variable">pasv_min_port</span><span class="token operator">=</span><span class="token number">10000</span>
+<span class="token assign-left variable">pasv_max_port</span><span class="token operator">=</span><span class="token number">10100</span>
+<span class="token assign-left variable">allow_writeable_chroot</span><span class="token operator">=</span>YES
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br></div></div><p>现在已经安装配置好 ftp 啦。</p> <p>因为 Ubuntu 的内置防火墙默认情况下是阻止 FTP 通信的，但通过下面的命令可以在 UFW 中创建一个异常以允许流量：接着可以修改防火墙规则，如下：</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> ufw allow from any to any port <span class="token number">20,21</span>,10000:10100 proto tcp
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>接着重启 vsftp 来加载信配置</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">service</span> vsftpd restart
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>后面如果每次启动 wsl 都要重新使用命令 service vsftpd start 来启动 ftp 服务，systemctl 命令在 wsl 中用不了，所以只能用 service 命令来每次都启动了。</p> <h2 id="创建用于-ftp-访问的用户"><a href="#创建用于-ftp-访问的用户" class="header-anchor">#</a> 创建用于 ftp 访问的用户</h2> <p>上面已经将 ftp 所有工作都完成了，但是如果想在其他终端访问该 ftp 的话当然还需要一个账号密码来实现终端间的沟通吧。</p> <p>所以下面我们需要在 Linux 上创建一个新用户，用于 ftp 使用。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">useradd</span> -m ftptest
+<span class="token function">sudo</span> <span class="token function">passwd</span> ftptest
+<span class="token comment"># 然后输入密码</span>
+New password:
+Retype new password:
+passwd: password updated successfully
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>接下来验证下用户创建是否成功，所以在 ftptest 文件夹下创建一个文件 FTP-TEST，当使用 ftp 登录到 ftptest 时可见 d 到该文件。</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token function">sudo</span> <span class="token function">bash</span> -c <span class="token string">&quot;echo FTP TESTING &gt; /home/ftptest/FTP-TEST&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后在 Linux 上连接 FTP 服务器</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>root@LAPTOP-PN3TTOB5:~<span class="token comment"># ftp 127.0.0.1</span>
+Connected to <span class="token number">172.29</span>.xx.yy.
+<span class="token number">220</span> <span class="token punctuation">(</span>vsFTPd <span class="token number">3.0</span>.5<span class="token punctuation">)</span>
+Name <span class="token punctuation">(</span><span class="token number">172.29</span>.xx.yy:root<span class="token punctuation">)</span>: ftptest
+<span class="token number">331</span> Please specify the password.
+Password:
+<span class="token number">230</span> Login successful.
+Remote system <span class="token builtin class-name">type</span> is UNIX.
+Using binary mode to transfer files.
+ftp<span class="token operator">&gt;</span> <span class="token function">ls</span>
+<span class="token number">229</span> Entering Extended Passive Mode <span class="token punctuation">(</span><span class="token operator">||</span><span class="token operator">|</span><span class="token number">10086</span><span class="token operator">|</span><span class="token punctuation">)</span>
+<span class="token number">150</span> Here comes the directory listing.
+-rw-r--r--    <span class="token number">1</span> <span class="token number">0</span>        <span class="token number">0</span>              <span class="token number">12</span> Dec <span class="token number">11</span> <span class="token number">23</span>:20 FTP-TEST
+<span class="token number">226</span> Directory send OK.
+ftp<span class="token operator">&gt;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>可见，输入 ls 命令 即可返回：FTP-TEST</p> <h2 id="获取-linux-ip-的方法"><a href="#获取-linux-ip-的方法" class="header-anchor">#</a> 获取 Linux IP 的方法</h2> <p>也可以使用 Linux 实际 IP 来访问</p> <p>获取 Linux 当前 IP 地址方式如下:</p> <p>eth0 为 Linux 的 IP</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 方法一：</span>
+root@LAPTOP-PN3TTOB5:~<span class="token comment"># ip addr show</span>
+<span class="token number">1</span>: lo: <span class="token operator">&lt;</span>LOOPBACK,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">65536</span> qdisc noqueue state UNKNOWN group default qlen <span class="token number">1000</span>
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet <span class="token number">127.0</span>.0.1/8 scope <span class="token function">host</span> lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope <span class="token function">host</span>
+       valid_lft forever preferred_lft forever
+<span class="token number">2</span>: eth0: <span class="token operator">&lt;</span>BROADCAST,MULTICAST,UP,LOWER_UP<span class="token operator">&gt;</span> mtu <span class="token number">1500</span> qdisc mq state UP group default qlen <span class="token number">1000</span>
+    link/ether 00:15:5d:9e:14:4c brd ff:ff:ff:ff:ff:ff
+    inet <span class="token number">172.29</span>.xx.yy/20 brd <span class="token number">172.29</span>.31.255 scope global eth0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::215:5dff:fe9e:144c/64 scope <span class="token function">link</span>
+       valid_lft forever preferred_lft forever
+
+<span class="token comment"># 方法二：</span>
+root@LAPTOP-PN3TTOB5:~<span class="token comment"># ifconfig</span>
+eth0: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">416</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,BROADCAST,RUNNING,MULTICAST<span class="token operator">&gt;</span>  mtu <span class="token number">1500</span>
+        inet <span class="token number">172.29</span>.xx.yy  netmask <span class="token number">255.255</span>.240.0  broadcast <span class="token number">172.29</span>.31.255
+        inet6 fe80::215:5dff:fe9e:144c  prefixlen <span class="token number">64</span>  scopeid 0x2<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>link<span class="token operator">&gt;</span>
+        ether 00:15:5d:9e:14:4c  txqueuelen <span class="token number">1000</span>  <span class="token punctuation">(</span>Ethernet<span class="token punctuation">)</span>
+        RX packets <span class="token number">15313</span>  bytes <span class="token number">36004054</span> <span class="token punctuation">(</span><span class="token number">36.0</span> MB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">7839</span>  bytes <span class="token number">713823</span> <span class="token punctuation">(</span><span class="token number">713.8</span> KB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+lo: <span class="token assign-left variable">flags</span><span class="token operator">=</span><span class="token number">7</span><span class="token operator"><span class="token file-descriptor important">3</span>&lt;</span>UP,LOOPBACK,RUNNING<span class="token operator">&gt;</span>  mtu <span class="token number">65536</span>
+        inet <span class="token number">127.0</span>.0.1  netmask <span class="token number">255.0</span>.0.0
+        inet6 ::1  prefixlen <span class="token number">128</span>  scopeid 0x1<span class="token operator"><span class="token file-descriptor important">0</span>&lt;</span>host<span class="token operator">&gt;</span>
+        loop  txqueuelen <span class="token number">1000</span>  <span class="token punctuation">(</span>Local Loopback<span class="token punctuation">)</span>
+        RX packets <span class="token number">67</span>  bytes <span class="token number">3986</span> <span class="token punctuation">(</span><span class="token number">3.9</span> KB<span class="token punctuation">)</span>
+        RX errors <span class="token number">0</span>  dropped <span class="token number">0</span>  overruns <span class="token number">0</span>  frame <span class="token number">0</span>
+        TX packets <span class="token number">67</span>  bytes <span class="token number">3986</span> <span class="token punctuation">(</span><span class="token number">3.9</span> KB<span class="token punctuation">)</span>
+        TX errors <span class="token number">0</span>  dropped <span class="token number">0</span> overruns <span class="token number">0</span>  carrier <span class="token number">0</span>  collisions <span class="token number">0</span>
+
+<span class="token comment"># 方法三：</span>
+root@LAPTOP-PN3TTOB5:~<span class="token comment"># hostname -I</span>
+<span class="token number">172.29</span>.xx.yy
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br></div></div><h2 id="window-ftp-连接-linux"><a href="#window-ftp-连接-linux" class="header-anchor">#</a> Window FTP 连接 Linux</h2> <p>一切准备就绪，接下来就可以在 Window 使用 FTP 软件与 Linux 沟通连接了。</p> <p>本人是使用开源软件 FileZilla 进行连接的</p> <ul><li><p>打开软件后新建站点；</p></li> <li><p>协议：FTP-文本传输协议</p></li> <li><p>主机：172.29.xx.yy(Linux IP)</p></li> <li><p>端口号： 21</p></li> <li><p>加密方式：如果可用，使用显式的 FTP over TSL（默认）</p></li> <li><p>登录类型：正常</p></li> <li><p>用户：ftptest</p></li> <li><p>密码：</p></li></ul> <p>然后点连接，Bingo~大功告成~</p></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a936bdb4 data-v-a936bdb4><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a936bdb4><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a936bdb4></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a936bdb4></path></svg></div><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:130px;height:290px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="130" height="290" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:130px;height:290px;"></canvas></div></div></div>
+    <script src="/idea-domain/assets/js/app.89376c8e.js" defer></script><script src="/idea-domain/assets/js/4.5465c98c.js" defer></script><script src="/idea-domain/assets/js/1.4d4f02de.js" defer></script><script src="/idea-domain/assets/js/16.679932b8.js" defer></script>
+  </body>
+</html>

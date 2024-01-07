@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>你不知道的JavaScript之this指向 | JyLie</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/idea-domain/favicon.ico">
+    <meta name="description" content="Code my dream!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/idea-domain/assets/css/0.styles.2c36a006.css" as="style"><link rel="preload" href="/idea-domain/assets/js/app.89376c8e.js" as="script"><link rel="preload" href="/idea-domain/assets/js/4.5465c98c.js" as="script"><link rel="preload" href="/idea-domain/assets/js/1.4d4f02de.js" as="script"><link rel="preload" href="/idea-domain/assets/js/50.1a6b9738.js" as="script"><link rel="prefetch" href="/idea-domain/assets/js/10.a2352b9f.js"><link rel="prefetch" href="/idea-domain/assets/js/11.c25da6a4.js"><link rel="prefetch" href="/idea-domain/assets/js/12.4b9a78a0.js"><link rel="prefetch" href="/idea-domain/assets/js/13.4baadb5a.js"><link rel="prefetch" href="/idea-domain/assets/js/14.185a9a02.js"><link rel="prefetch" href="/idea-domain/assets/js/15.9636a8ca.js"><link rel="prefetch" href="/idea-domain/assets/js/16.679932b8.js"><link rel="prefetch" href="/idea-domain/assets/js/17.dd32ab06.js"><link rel="prefetch" href="/idea-domain/assets/js/18.32b1cf56.js"><link rel="prefetch" href="/idea-domain/assets/js/19.a56920af.js"><link rel="prefetch" href="/idea-domain/assets/js/20.438036b2.js"><link rel="prefetch" href="/idea-domain/assets/js/21.16413d4b.js"><link rel="prefetch" href="/idea-domain/assets/js/22.0e53dc4f.js"><link rel="prefetch" href="/idea-domain/assets/js/23.1fbc2526.js"><link rel="prefetch" href="/idea-domain/assets/js/24.84de9b18.js"><link rel="prefetch" href="/idea-domain/assets/js/25.d8f5fb42.js"><link rel="prefetch" href="/idea-domain/assets/js/26.08b284c3.js"><link rel="prefetch" href="/idea-domain/assets/js/27.fc88097b.js"><link rel="prefetch" href="/idea-domain/assets/js/28.0e86cd67.js"><link rel="prefetch" href="/idea-domain/assets/js/29.14a3a251.js"><link rel="prefetch" href="/idea-domain/assets/js/30.380fd044.js"><link rel="prefetch" href="/idea-domain/assets/js/31.2159b398.js"><link rel="prefetch" href="/idea-domain/assets/js/32.9fd1bac0.js"><link rel="prefetch" href="/idea-domain/assets/js/33.66deed1e.js"><link rel="prefetch" href="/idea-domain/assets/js/34.660bbe89.js"><link rel="prefetch" href="/idea-domain/assets/js/35.d6613fc9.js"><link rel="prefetch" href="/idea-domain/assets/js/36.5debaab7.js"><link rel="prefetch" href="/idea-domain/assets/js/37.baea05f8.js"><link rel="prefetch" href="/idea-domain/assets/js/38.b12b93d9.js"><link rel="prefetch" href="/idea-domain/assets/js/39.881b30e0.js"><link rel="prefetch" href="/idea-domain/assets/js/40.c5906ef8.js"><link rel="prefetch" href="/idea-domain/assets/js/41.314b3f1d.js"><link rel="prefetch" href="/idea-domain/assets/js/42.b3e6177b.js"><link rel="prefetch" href="/idea-domain/assets/js/43.05e57135.js"><link rel="prefetch" href="/idea-domain/assets/js/44.decce320.js"><link rel="prefetch" href="/idea-domain/assets/js/45.92f9fb7a.js"><link rel="prefetch" href="/idea-domain/assets/js/46.d9fd684f.js"><link rel="prefetch" href="/idea-domain/assets/js/47.46b7b146.js"><link rel="prefetch" href="/idea-domain/assets/js/48.4ac11cbd.js"><link rel="prefetch" href="/idea-domain/assets/js/49.73378ba2.js"><link rel="prefetch" href="/idea-domain/assets/js/5.0b75201a.js"><link rel="prefetch" href="/idea-domain/assets/js/51.70dbe9ec.js"><link rel="prefetch" href="/idea-domain/assets/js/52.1743641c.js"><link rel="prefetch" href="/idea-domain/assets/js/53.88c57e85.js"><link rel="prefetch" href="/idea-domain/assets/js/54.8df6ccd2.js"><link rel="prefetch" href="/idea-domain/assets/js/55.7958b607.js"><link rel="prefetch" href="/idea-domain/assets/js/56.cfd57e97.js"><link rel="prefetch" href="/idea-domain/assets/js/57.156cd233.js"><link rel="prefetch" href="/idea-domain/assets/js/58.197d2a8c.js"><link rel="prefetch" href="/idea-domain/assets/js/59.d7a72db1.js"><link rel="prefetch" href="/idea-domain/assets/js/6.1d6b63a7.js"><link rel="prefetch" href="/idea-domain/assets/js/60.c62a4d78.js"><link rel="prefetch" href="/idea-domain/assets/js/61.949370dd.js"><link rel="prefetch" href="/idea-domain/assets/js/62.23a941cc.js"><link rel="prefetch" href="/idea-domain/assets/js/63.65d4a7fe.js"><link rel="prefetch" href="/idea-domain/assets/js/64.7ac5ce1f.js"><link rel="prefetch" href="/idea-domain/assets/js/65.06b31195.js"><link rel="prefetch" href="/idea-domain/assets/js/66.0502d679.js"><link rel="prefetch" href="/idea-domain/assets/js/67.8933a0d7.js"><link rel="prefetch" href="/idea-domain/assets/js/68.b5952168.js"><link rel="prefetch" href="/idea-domain/assets/js/69.5e2c7b6f.js"><link rel="prefetch" href="/idea-domain/assets/js/7.915bfa51.js"><link rel="prefetch" href="/idea-domain/assets/js/70.b1e5fa24.js"><link rel="prefetch" href="/idea-domain/assets/js/71.1f97cb34.js"><link rel="prefetch" href="/idea-domain/assets/js/72.de33eb9f.js"><link rel="prefetch" href="/idea-domain/assets/js/73.b6026198.js"><link rel="prefetch" href="/idea-domain/assets/js/74.36040e8e.js"><link rel="prefetch" href="/idea-domain/assets/js/75.b1ee04bd.js"><link rel="prefetch" href="/idea-domain/assets/js/76.674f3bcb.js"><link rel="prefetch" href="/idea-domain/assets/js/77.2e8d78eb.js"><link rel="prefetch" href="/idea-domain/assets/js/78.6be64fef.js"><link rel="prefetch" href="/idea-domain/assets/js/79.9b118866.js"><link rel="prefetch" href="/idea-domain/assets/js/8.189eb478.js"><link rel="prefetch" href="/idea-domain/assets/js/80.85bb9d6a.js"><link rel="prefetch" href="/idea-domain/assets/js/81.0dab5b76.js"><link rel="prefetch" href="/idea-domain/assets/js/82.428c38c7.js"><link rel="prefetch" href="/idea-domain/assets/js/83.d4455b9e.js"><link rel="prefetch" href="/idea-domain/assets/js/84.02a939e7.js"><link rel="prefetch" href="/idea-domain/assets/js/85.ed694f58.js"><link rel="prefetch" href="/idea-domain/assets/js/86.eeda91b2.js"><link rel="prefetch" href="/idea-domain/assets/js/87.afb850a1.js"><link rel="prefetch" href="/idea-domain/assets/js/9.db2c446c.js"><link rel="prefetch" href="/idea-domain/assets/js/vendors~flowchart.567eafbc.js">
+    <link rel="stylesheet" href="/idea-domain/assets/css/0.styles.2c36a006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5f3f4765><div data-v-5f3f4765><div id="loader-wrapper" class="loading-wrapper" data-v-164600bd data-v-5f3f4765 data-v-5f3f4765><div class="loader-main" data-v-164600bd><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-7c5ab02c data-v-5f3f4765 data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>JyLie</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-5f3f4765><header class="navbar" data-v-5f3f4765><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/idea-domain/" class="home-link router-link-active"><!----> <span class="site-name">JyLie</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5f3f4765></div> <aside class="sidebar" data-v-5f3f4765><div class="personal-info-wrapper" data-v-a30e08ee><img src="/idea-domain/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a30e08ee> <h3 class="name" data-v-a30e08ee>
+    JyLie
+  </h3> <div class="num" data-v-a30e08ee><div data-v-a30e08ee><h3 data-v-a30e08ee>74</h3> <h6 data-v-a30e08ee>Article</h6></div> <div data-v-a30e08ee><h3 data-v-a30e08ee>79</h3> <h6 data-v-a30e08ee>Tag</h6></div></div> <hr data-v-a30e08ee></div> <nav class="nav-links"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>你不知道的JavaScript之this指向</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/idea-domain/post/%5Bjs%5D%5Bthis%5D%E4%BD%A0%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84JavaScript%E4%B9%8Bthis%E6%8C%87%E5%90%91.html#隐式绑定丢失" class="sidebar-link">隐式绑定丢失</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-7c5ab02c data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>你不知道的JavaScript之this指向</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div data-v-5f3f4765><main class="page"><div class="page-title" style="display:none;"><h1>你不知道的JavaScript之this指向</h1> <hr> <div data-v-2c863f0e><i class="iconfont reco-account" data-v-2c863f0e><span data-v-2c863f0e>JyLie</span></i> <i class="iconfont reco-date" data-v-2c863f0e><span data-v-2c863f0e>2017-02-23</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c863f0e><span class="tag-item" data-v-2c863f0e>JavaScript</span><span class="tag-item" data-v-2c863f0e>this</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><h1 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h1> <p>JavaScript 对 this 指向 话题 的理解是永不过时的，鉴于 JavaScript 中 this 风骚的运作方式，本文将试图将其拆解分析，烹饪再食用~。</p> <p><code>this is all about context.</code>，大概意思就是：<code>this</code> 与当前执行上下文相关。</p> <p>this 说白了就是找离自己最近的对象，即拥有当前上下文（context）的对象（context object）。</p> <p>换句话说，this 与函数被调用时，调用函数的对象有关。</p> <h1 id="默认绑定，全局对象"><a href="#默认绑定，全局对象" class="header-anchor">#</a> 默认绑定，全局对象</h1> <p>正所谓近水楼台先得月，全局对象作为对遥远的对象是作为备胎的存在，为语言边界护城河做兜底。</p> <p>一般情况下，this 指向全局对象则属于默认绑定。那么什么是默认绑定呢？</p> <p><code>this 默认绑定</code>，通俗地可理解为函数被调用时无任何调用前缀对象的情景，由于函数调用时无调用前缀对象或函数无特定绑定，所以<code>非严格模式</code>下此时 this 会指向<code>全局对象</code>。</p> <p>在非严格模式下，不同终端的全局变量对象有所区别：</p> <ul><li>在浏览器端，this 指向 <code>Window 对象</code>；</li> <li>在 Nodejs 环境，this 指向 <code>global 对象</code>；</li> <li>在函数环境，this 指向 <code>绑定当前函数的作用域</code>；</li></ul> <p>在严格模式下：</p> <ul><li>在 <code>use strict</code> 环境， this 指向 <code>undefined</code>；</li></ul> <p>🌰 在非严格模式下</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">/* 在非严格模式下，this默认绑定 */</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'window global this: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+  <span class="token keyword">function</span> <span class="token function">fnOuter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fnOuter: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">windowThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'windowThis: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+    <span class="token keyword">function</span> <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fnInner: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+      <span class="token function">fnOuter</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">windowThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>上述栗子中，无论函数声明在哪，在哪调用，由于函数调用时前面并未指定任何对象，这种情况下 this 均指向全局对象 window。</p> <p>但须注意的是，在严格模式下，默认绑定下的 this 会指向 undefined。</p> <p>🌰 在严格模式下，再来看几个栗子，然后在心中记下答案</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token comment">/* 在非严格模式下，this默认绑定 */</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'在非严格模式下，this默认绑定'</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">windowThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'windowThis: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'windowThis: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fnInner: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fnInner: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">function</span> <span class="token function">windowStrictThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token string">'use strict'</span><span class="token punctuation">;</span>
+    <span class="token function">windowThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">function</span> <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'windowStrictThis: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'windowStrictThis: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">fnInner</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">windowStrictThis</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br></div></div><p>建议得出答案再看下文，</p> <p>一起来倒数吧，“花栗鼠。。。。。。”。</p> <p>🌸🌰🐿️
+🌸🌰🐿️
+🌸🌰🐿️
+🌰🐿️🌸
+🌰🐿️🌸
+🌰🐿️🌸
+🐿️🌸🌰
+🐿️🌸🌰
+🐿️🌸🌰</p> <p>好啦，来看正确输出吧，都答对了吧~</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// windowThis:  Window{}</span>
+<span class="token comment">// windowThis:  在非严格模式下，this默认绑定</span>
+<span class="token comment">// fnInner:  Window{}</span>
+<span class="token comment">// fnInner:  在非严格模式下，this默认绑定</span>
+<span class="token comment">// windowStrictThis:  undefined</span>
+<span class="token comment">// windowStrictThis:  TypeError: Cannot read property 'mode' of undefined</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>可见在函数内部使用严格模式声明后，this 指向变为 undefined 了，同时在函数内声明严格模式只对函数内定义的变量与函数有关，跟其调用的外部函数无关。</p> <h1 id="点石成金，隐式绑定"><a href="#点石成金，隐式绑定" class="header-anchor">#</a> 点石成金，隐式绑定</h1> <p>什么是隐式绑定呢？</p> <p><code>this 隐式绑定</code>：如果在函数调用的时，函数前面存在调用他的对象，那么 this 就会隐式绑定到这个调用对象上。</p> <p>所以隐式绑定的关键点在于函数被调用的对象是谁，说白了就是找调用这个函数前面的点<code>.</code>是谁，谁就是 this 所绑定的对象了。</p> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss1'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss2'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">call</span><span class="token operator">:</span> boss1<span class="token punctuation">.</span>fn<span class="token punctuation">,</span>
+    <span class="token literal-property property">o</span><span class="token operator">:</span> boss1<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  boss2<span class="token punctuation">.</span>o<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1</span>
+  <span class="token function">boss2</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss2</span>
+
+  <span class="token keyword">var</span> boss1Copy <span class="token operator">=</span> boss1<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+  <span class="token function">boss1Copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>函数隐式绑定时，如果函数调用时存在多个对象，this 指向距离自己最近的对象，也就是 <code>.</code> 前面的对象是谁，this 就指向谁。</p> <p>那么问题来了，如果删除 boss2 上的 mode，会有什么不一样呢？</p> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss1'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">call</span><span class="token operator">:</span> boss1<span class="token punctuation">.</span>fn<span class="token punctuation">,</span>
+    <span class="token literal-property property">o</span><span class="token operator">:</span> boss1<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">boss2</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// undefined</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>答案是输出 undefined，因为此时由于 boss1 只是 boss2 的属性，boss1 与 boss2 的原型链各不相同相同，不属于父子关系，因此符合作用域链查找规则，所以 this 须从 boss2 上找 mode 属性，当 boss2 上不存在 mode 属性时则返回 undefined。注意不要与作用域链混淆了。</p> <p>🌰 下面这个例子就要小心点咯，能想出答案么？</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss1 mode'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+  <span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span>mode <span class="token operator">=</span> <span class="token string">'Fn mode'</span><span class="token punctuation">;</span>
+  <span class="token class-name">Fn</span><span class="token punctuation">.</span>prototype<span class="token punctuation">.</span><span class="token function-variable function">fnProto</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss2 mode'</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">fn</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> boss1<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">proto</span><span class="token operator">:</span> <span class="token keyword">new</span> <span class="token class-name">Fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  boss2<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1 mode</span>
+  boss2<span class="token punctuation">.</span>proto<span class="token punctuation">.</span><span class="token function">fnProto</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Fn mode</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><p>答案是 boss1 mode 和 Fn mode 哦，猜对了吗。</p> <p>涉及到原型链与作用域链的以一些区别，基本这里就不做解析了，请各自查漏补缺~。</p> <h2 id="隐式绑定丢失"><a href="#隐式绑定丢失" class="header-anchor">#</a> 隐式绑定丢失</h2> <p>相信细心的同学已经发现，上述例子有一个函数赋值给变量再调用的情景。当函数赋值再调用后，原本 this 指向会发生改变，函数的 this 不会指向其原对象，从而引起隐形绑定丢失问题。</p> <p>常见引起隐形丢失的方式：</p> <ol><li>函数赋值变量再调用</li></ol> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss1'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss2'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">call</span><span class="token operator">:</span> boss1<span class="token punctuation">.</span>fn<span class="token punctuation">,</span>
+    <span class="token literal-property property">o</span><span class="token operator">:</span> boss1<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  boss2<span class="token punctuation">.</span>o<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1</span>
+  <span class="token function">boss2</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss2</span>
+
+  <span class="token keyword">var</span> boss1Copy <span class="token operator">=</span> boss1<span class="token punctuation">.</span>fn<span class="token punctuation">;</span>
+  <span class="token function">boss1Copy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>上述案例 boss1Copy 和 boss2.call 就是函数赋值变量再调用的情况</p> <ol start="2"><li>函数以形参传递</li></ol> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> mode <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">mode</span><span class="token operator">:</span> <span class="token string">'boss1'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>mode<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">exce</span><span class="token punctuation">(</span><span class="token parameter">params</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    params <span class="token operator">&amp;&amp;</span> <span class="token function">params</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">exce</span><span class="token punctuation">(</span>boss1<span class="token punctuation">.</span>fn<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>上述例子中我们将 boss1.fn 也就是一个函数传递进 exce 中执行，这里只是单纯传递了一个函数而已，this 并没有跟函数绑在一起，此时 this 指向原对象发送 丢失从而指向了 window。</p> <p>可见，隐式丢失本质上是因为函数赋值引起的，在函数赋值给变量或另一个函数形参 Fn 后，在调用 Fn 时 this 会指向离其最近的对象。</p> <h1 id="指腹为婚，显式绑定"><a href="#指腹为婚，显式绑定" class="header-anchor">#</a> 指腹为婚，显式绑定</h1> <p><code>this 显式绑定</code>：指通过 Object.prototype.call、Object.prototype.apply、Object.prototype.bind 方法改变 this 指向。</p> <p>这里我将显式绑定细分为：</p> <ul><li><p>显式绑定：在运行时改变 this 指向</p> <ul><li>call</li> <li>apply</li></ul></li> <li><p>显式硬绑定：一次绑定后，永久不能改变 this 指向</p> <ul><li>bind</li></ul></li></ul> <p>接下来看个例子，分别通过 call、apply、bind 改变了函数 log 的 this 指向。</p> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss1'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss2'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss3 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss3'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1</span>
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss2</span>
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>boss3<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss3</span>
+
+  <span class="token keyword">var</span> logBind <span class="token operator">=</span> <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>boss3<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">logBind</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss3</span>
+  <span class="token function">logBind</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss3</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>在 JavaScript 中，当调用一个函数时，我们习惯称之为函数调用，此时函数处于一个被动的状态；而 bind、 call 与 apply 让函数从被动变主动，函数能主动选择自己的上下文，所以这种写法我们又称之为<code>函数应用</code>。</p> <p>注意，如果在使用 bind、 call 与 apply 之类的方法改变 this 指向时，指向参数提供的是 null 或者 undefined 时， this 将指向全局对象。</p> <p>🌰 举个栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'window'</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss1'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss2'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss3 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss3'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">apply</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span><span class="token keyword">undefined</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>同样值得注意的是，bind 在显式改变 this 指向之后会返回一个新的绑定函数（bound function，BF）。绑定函数是一个 exotic function object（怪异函数对象，ECMAScript 2015 中的术语），它包装了原函数对象。调用绑定函数通常会导致执行包装函数。</p> <p>另外 简明 补充一下 call、apply、bind 的区别：</p> <ul><li><p>bind:函数硬绑定 this 指向并返回一个全新函数 BF，且返回的 BF 无法再次被 call、apply、bind 改变 this 指向，且需要执行 BF 才会运行函数。</p> <ul><li>function.bind(thisArg[, arg1[, arg2[, ...]]])()</li></ul></li> <li><p>call：改变 this 指向的同时还会执行函数，一个以散列形式的形参。</p> <ul><li>function.bind(thisArg[, arg1[, arg2[, ...]]])</li></ul></li> <li><p>apply：改变 this 指向的同时还会执行函数，可接受一个数组形式的形参。</p> <ul><li>function.apply(thisArg,[param1,param2...])</li></ul></li></ul> <p>call &amp; apply 主要区别在于传参形式不同，在传参的情况下，call 的性能要高于 apply，因为 apply 在执行时还要多一步解析数组。</p> <h1 id="内有乾坤，new-绑定"><a href="#内有乾坤，new-绑定" class="header-anchor">#</a> 内有乾坤，new 绑定</h1> <p>严格来说，JavaScript 中的构造函数只是使用 关键字 new 调用的普通函数，它并不是一个类，最终返回的对象也不是一个实例，只是为了便于理解习惯这么说罢了。</p> <p>一个比较容易忽略的会绑定 this 指向 的方法就是使用 new。当我们 new 一个函数时，就会自动把 this 绑定在新对象上，然后再调用这个函数。<code>new 会覆盖 bind 的绑定让其无法生效</code>。</p> <p>那么 new 对函数到底起到什么作用呢，大致分为三步：</p> <ol><li>创建一个空的简单 JavaScript 对象（即{}）；</li> <li>为步骤 1 新创建的对象添加属性<code>__proto__</code>，将该属性链接至构造函数的原型对象 ；</li> <li>将步骤 1 新创建的对象作为 this 的上下文 ；</li> <li>如果该函数没有返回对象，则返回 this。</li></ol> <p>这个过程我们称之为构造调用。</p> <p>🌰 那么 new 在构造调用时对 this 产生什么影响呢？请看栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// window{}</span>
+  <span class="token keyword">new</span> <span class="token class-name">log</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log{}</span>
+
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss1'</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1{}</span>
+  <span class="token keyword">new</span> <span class="token class-name">log<span class="token punctuation">.</span>call</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught TypeError: log.call is not a constructor</span>
+  <span class="token keyword">new</span> <span class="token class-name">log<span class="token punctuation">.</span>bind</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Uncaught TypeError: log.call is not a constructor</span>
+
+  <span class="token keyword">var</span> logBind <span class="token operator">=</span> <span class="token function">log</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">logBind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// boss1{}</span>
+  <span class="token keyword">new</span> <span class="token class-name">logBind</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// log{}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p>当 new 一个函数时，this 会被绑定为函数本身，即使函数在 bind 改变 this 指向的情况下，关键字 new 依旧会将 this 指向为函数本身。且 new 绑定与显式绑定互不兼容。</p> <h1 id="军令如山，箭头函数"><a href="#军令如山，箭头函数" class="header-anchor">#</a> 军令如山，箭头函数</h1> <p>ES6 的箭头函数是另类的存在，为什么要单独说呢，这是因为箭头函数中的 this 不适用上面介绍的几种绑定规则。</p> <p>准确来说，箭头函数中没有 this，箭头函数的 this 指向取决于外层作用域中的 this，外层作用域或函数的 this 指向谁，箭头函数中的 this 便指向谁。</p> <p>因为箭头函数里的 this 是永远指向到当前词法作用域（Lexical this）之中 ，在代码编码时就可以确定。没有其它 this 绑定方式可以覆盖。</p> <p>这样的好处就是方便让回调函数的 this 使用当前的作用域，不怕引起混淆。</p> <p>所以对于箭头函数，只要看它在哪里创建的就行。</p> <p>🌰 有点吃软饭的嫌疑，一点都不硬朗，我们来看看栗子：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token punctuation">{</span>
+  <span class="token keyword">function</span> <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'efnArrow: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">function</span> <span class="token function">callback</span><span class="token punctuation">(</span><span class="token parameter">cb</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">var</span> boss1 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss1'</span><span class="token punctuation">,</span>
+    <span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fn: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function-variable function">fnArrow</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'fnArrow: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">ret</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'ret: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">retArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'retArrow: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'cb: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token function">cbArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">callback</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'cbArrow: '</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> boss2 <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">'boss2'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">fn</span><span class="token operator">:</span> boss1<span class="token punctuation">.</span>retArrow<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  boss1<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fn: boss1{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">fnArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fnArrow: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">ret</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ret: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">retArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// retArrow: boss1{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">cb</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// cb: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">cbArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// cbArrow: boss1{}</span>
+
+  boss1<span class="token punctuation">.</span><span class="token function">fn</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fn: boss2{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">fnArrow</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// fnArrow: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">ret</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ret: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">retArrow</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// retArrow: boss2{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">ret</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// ret: boss2{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">retArrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// retArrow: boss1{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">cb</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// cb: window{}</span>
+  boss1<span class="token punctuation">.</span><span class="token function">cbArrow</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// cbArrow: boss2{}</span>
+
+  <span class="token keyword">var</span> bar <span class="token operator">=</span> boss1<span class="token punctuation">.</span><span class="token function">retArrow</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">bar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returnArrowLog: boss2{}</span>
+  <span class="token function">bar</span><span class="token punctuation">.</span><span class="token function">call</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returnArrowLog: boss2{}</span>
+  <span class="token function">bar</span><span class="token punctuation">.</span><span class="token function">bind</span><span class="token punctuation">(</span>boss1<span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// returnArrowLog: boss2{}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br></div></div><p>对 boss1.retArrow 为啥我们第一次绑定 this 并返回箭头函数后，再次改变 this 指向没生效呢？</p> <p>前面说了，箭头函数的 this 取决于外层作用域的 this，boss1.retArrow 函数执行时 this 指向了 boss1，所以箭头函数的 this 也指向 boss1。除此之外，箭头函数 this 还有一个特性，那就是一旦箭头函数的 this 绑定成功，也无法被再次修改，有点硬绑定的意思。</p> <p>当然，箭头函数的 this 也不是真的无法修改，我们知道箭头函数的 this 就像作用域继承一样从上层作用域找，因此我们可以修改外层函数 this 指向达到间接修改箭头函数 this 的目的，如 boss1.retArrow.call(boss2)()成功将 this 指向 boss2。</p> <h1 id="this-绑定优先级"><a href="#this-绑定优先级" class="header-anchor">#</a> this 绑定优先级</h1> <p>前面已经介绍了几种 this 绑定规则，那么问题来了，如果一个函数调用存在多种绑定方法，this 最终指向谁呢？这里直接先上答案。</p> <p>this 绑定优先级：</p> <ul><li>显式绑定 &gt; 隐式绑定 &gt; 默认绑定</li> <li>new 绑定 &gt; 隐式绑定 &gt; 默认绑定</li></ul> <p>为什么显式绑定不和 new 绑定比较呢？因为不存在这种绑定同时生效的情景，如果同时写这两种代码会直接抛错，所以大家只用记住上面的规律即可。</p> <h1 id="总结"><a href="#总结" class="header-anchor">#</a> 总结</h1> <p>文章到这里，对于 this 的几种绑定场景就全部总结完毕了，如果你有跟着例子一起练习下来，相信聪明的你现在对于 this 的理解一定更上一层楼了。</p> <p>那么通过本文，我们学习了默认绑定在严格模式与非严格模式下 this 指向会有所不同。</p> <p>也知道了隐式绑定的触发条件与隐式丢失的几种情况。</p> <p>相对于隐式绑定的不可见，我们还学习到显式绑定以及硬绑定，并提到非严格模式下，当绑定指向为 null 或 undefined 时 this 会指向全局。</p> <p>接着重新认识了 new 绑定。</p> <p>最后我们了解了不太合群的箭头函数中的 this 绑定，了解到箭头函数的 this 由外层作用域的 this 指向决定，并有一旦绑定成功也无法再修改的特性。</p> <p>好了，内容如有不妥之处请指正，希望你能受益良多~</p> <h1 id="相关文献"><a href="#相关文献" class="header-anchor">#</a> 相关文献</h1> <ul><li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this" target="_blank" rel="noopener noreferrer">MDN-this<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/bind" target="_blank" rel="noopener noreferrer">MDN-Function.prototype.bind()<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/call" target="_blank" rel="noopener noreferrer">MDN-Function.prototype.call()<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/apply" target="_blank" rel="noopener noreferrer">MDN-Function.prototype.apply()<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/new" target="_blank" rel="noopener noreferrer">MDN-new 运算符<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions" target="_blank" rel="noopener noreferrer">MDN-箭头函数<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://mp.weixin.qq.com/s/oAxvG_CnKpL1aF-37RCgQA" target="_blank" rel="noopener noreferrer">你不知道的 JavaScript 之 this 指向-原文<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a936bdb4 data-v-a936bdb4><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a936bdb4><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a936bdb4></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a936bdb4></path></svg></div><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:130px;height:290px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="130" height="290" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:130px;height:290px;"></canvas></div></div></div>
+    <script src="/idea-domain/assets/js/app.89376c8e.js" defer></script><script src="/idea-domain/assets/js/4.5465c98c.js" defer></script><script src="/idea-domain/assets/js/1.4d4f02de.js" defer></script><script src="/idea-domain/assets/js/50.1a6b9738.js" defer></script>
+  </body>
+</html>

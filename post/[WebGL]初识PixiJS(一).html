@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>初识PixiJS(一) | JyLie</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/idea-domain/favicon.ico">
+    <meta name="description" content="Code my dream!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/idea-domain/assets/css/0.styles.2c36a006.css" as="style"><link rel="preload" href="/idea-domain/assets/js/app.89376c8e.js" as="script"><link rel="preload" href="/idea-domain/assets/js/4.5465c98c.js" as="script"><link rel="preload" href="/idea-domain/assets/js/1.4d4f02de.js" as="script"><link rel="preload" href="/idea-domain/assets/js/21.16413d4b.js" as="script"><link rel="prefetch" href="/idea-domain/assets/js/10.a2352b9f.js"><link rel="prefetch" href="/idea-domain/assets/js/11.c25da6a4.js"><link rel="prefetch" href="/idea-domain/assets/js/12.4b9a78a0.js"><link rel="prefetch" href="/idea-domain/assets/js/13.4baadb5a.js"><link rel="prefetch" href="/idea-domain/assets/js/14.185a9a02.js"><link rel="prefetch" href="/idea-domain/assets/js/15.9636a8ca.js"><link rel="prefetch" href="/idea-domain/assets/js/16.679932b8.js"><link rel="prefetch" href="/idea-domain/assets/js/17.dd32ab06.js"><link rel="prefetch" href="/idea-domain/assets/js/18.32b1cf56.js"><link rel="prefetch" href="/idea-domain/assets/js/19.a56920af.js"><link rel="prefetch" href="/idea-domain/assets/js/20.438036b2.js"><link rel="prefetch" href="/idea-domain/assets/js/22.0e53dc4f.js"><link rel="prefetch" href="/idea-domain/assets/js/23.1fbc2526.js"><link rel="prefetch" href="/idea-domain/assets/js/24.84de9b18.js"><link rel="prefetch" href="/idea-domain/assets/js/25.d8f5fb42.js"><link rel="prefetch" href="/idea-domain/assets/js/26.08b284c3.js"><link rel="prefetch" href="/idea-domain/assets/js/27.fc88097b.js"><link rel="prefetch" href="/idea-domain/assets/js/28.0e86cd67.js"><link rel="prefetch" href="/idea-domain/assets/js/29.14a3a251.js"><link rel="prefetch" href="/idea-domain/assets/js/30.380fd044.js"><link rel="prefetch" href="/idea-domain/assets/js/31.2159b398.js"><link rel="prefetch" href="/idea-domain/assets/js/32.9fd1bac0.js"><link rel="prefetch" href="/idea-domain/assets/js/33.66deed1e.js"><link rel="prefetch" href="/idea-domain/assets/js/34.660bbe89.js"><link rel="prefetch" href="/idea-domain/assets/js/35.d6613fc9.js"><link rel="prefetch" href="/idea-domain/assets/js/36.5debaab7.js"><link rel="prefetch" href="/idea-domain/assets/js/37.baea05f8.js"><link rel="prefetch" href="/idea-domain/assets/js/38.b12b93d9.js"><link rel="prefetch" href="/idea-domain/assets/js/39.881b30e0.js"><link rel="prefetch" href="/idea-domain/assets/js/40.c5906ef8.js"><link rel="prefetch" href="/idea-domain/assets/js/41.314b3f1d.js"><link rel="prefetch" href="/idea-domain/assets/js/42.b3e6177b.js"><link rel="prefetch" href="/idea-domain/assets/js/43.05e57135.js"><link rel="prefetch" href="/idea-domain/assets/js/44.decce320.js"><link rel="prefetch" href="/idea-domain/assets/js/45.92f9fb7a.js"><link rel="prefetch" href="/idea-domain/assets/js/46.d9fd684f.js"><link rel="prefetch" href="/idea-domain/assets/js/47.46b7b146.js"><link rel="prefetch" href="/idea-domain/assets/js/48.4ac11cbd.js"><link rel="prefetch" href="/idea-domain/assets/js/49.73378ba2.js"><link rel="prefetch" href="/idea-domain/assets/js/5.0b75201a.js"><link rel="prefetch" href="/idea-domain/assets/js/50.1a6b9738.js"><link rel="prefetch" href="/idea-domain/assets/js/51.70dbe9ec.js"><link rel="prefetch" href="/idea-domain/assets/js/52.1743641c.js"><link rel="prefetch" href="/idea-domain/assets/js/53.88c57e85.js"><link rel="prefetch" href="/idea-domain/assets/js/54.8df6ccd2.js"><link rel="prefetch" href="/idea-domain/assets/js/55.7958b607.js"><link rel="prefetch" href="/idea-domain/assets/js/56.cfd57e97.js"><link rel="prefetch" href="/idea-domain/assets/js/57.156cd233.js"><link rel="prefetch" href="/idea-domain/assets/js/58.197d2a8c.js"><link rel="prefetch" href="/idea-domain/assets/js/59.d7a72db1.js"><link rel="prefetch" href="/idea-domain/assets/js/6.1d6b63a7.js"><link rel="prefetch" href="/idea-domain/assets/js/60.c62a4d78.js"><link rel="prefetch" href="/idea-domain/assets/js/61.949370dd.js"><link rel="prefetch" href="/idea-domain/assets/js/62.23a941cc.js"><link rel="prefetch" href="/idea-domain/assets/js/63.65d4a7fe.js"><link rel="prefetch" href="/idea-domain/assets/js/64.7ac5ce1f.js"><link rel="prefetch" href="/idea-domain/assets/js/65.06b31195.js"><link rel="prefetch" href="/idea-domain/assets/js/66.0502d679.js"><link rel="prefetch" href="/idea-domain/assets/js/67.8933a0d7.js"><link rel="prefetch" href="/idea-domain/assets/js/68.b5952168.js"><link rel="prefetch" href="/idea-domain/assets/js/69.5e2c7b6f.js"><link rel="prefetch" href="/idea-domain/assets/js/7.915bfa51.js"><link rel="prefetch" href="/idea-domain/assets/js/70.b1e5fa24.js"><link rel="prefetch" href="/idea-domain/assets/js/71.1f97cb34.js"><link rel="prefetch" href="/idea-domain/assets/js/72.de33eb9f.js"><link rel="prefetch" href="/idea-domain/assets/js/73.b6026198.js"><link rel="prefetch" href="/idea-domain/assets/js/74.36040e8e.js"><link rel="prefetch" href="/idea-domain/assets/js/75.b1ee04bd.js"><link rel="prefetch" href="/idea-domain/assets/js/76.674f3bcb.js"><link rel="prefetch" href="/idea-domain/assets/js/77.2e8d78eb.js"><link rel="prefetch" href="/idea-domain/assets/js/78.6be64fef.js"><link rel="prefetch" href="/idea-domain/assets/js/79.9b118866.js"><link rel="prefetch" href="/idea-domain/assets/js/8.189eb478.js"><link rel="prefetch" href="/idea-domain/assets/js/80.85bb9d6a.js"><link rel="prefetch" href="/idea-domain/assets/js/81.0dab5b76.js"><link rel="prefetch" href="/idea-domain/assets/js/82.428c38c7.js"><link rel="prefetch" href="/idea-domain/assets/js/83.d4455b9e.js"><link rel="prefetch" href="/idea-domain/assets/js/84.02a939e7.js"><link rel="prefetch" href="/idea-domain/assets/js/85.ed694f58.js"><link rel="prefetch" href="/idea-domain/assets/js/86.eeda91b2.js"><link rel="prefetch" href="/idea-domain/assets/js/87.afb850a1.js"><link rel="prefetch" href="/idea-domain/assets/js/9.db2c446c.js"><link rel="prefetch" href="/idea-domain/assets/js/vendors~flowchart.567eafbc.js">
+    <link rel="stylesheet" href="/idea-domain/assets/css/0.styles.2c36a006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5f3f4765><div data-v-5f3f4765><div id="loader-wrapper" class="loading-wrapper" data-v-164600bd data-v-5f3f4765 data-v-5f3f4765><div class="loader-main" data-v-164600bd><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-7c5ab02c data-v-5f3f4765 data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>JyLie</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-5f3f4765><header class="navbar" data-v-5f3f4765><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/idea-domain/" class="home-link router-link-active"><!----> <span class="site-name">JyLie</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5f3f4765></div> <aside class="sidebar" data-v-5f3f4765><div class="personal-info-wrapper" data-v-a30e08ee><img src="/idea-domain/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a30e08ee> <h3 class="name" data-v-a30e08ee>
+    JyLie
+  </h3> <div class="num" data-v-a30e08ee><div data-v-a30e08ee><h3 data-v-a30e08ee>74</h3> <h6 data-v-a30e08ee>Article</h6></div> <div data-v-a30e08ee><h3 data-v-a30e08ee>79</h3> <h6 data-v-a30e08ee>Tag</h6></div></div> <hr data-v-a30e08ee></div> <nav class="nav-links"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>初识PixiJS(一)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/idea-domain/post/%5BWebGL%5D%E5%88%9D%E8%AF%86PixiJS(%E4%B8%80).html#pixi-application" class="sidebar-link">PIXI.Application</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BWebGL%5D%E5%88%9D%E8%AF%86PixiJS(%E4%B8%80).html#pixi-container" class="sidebar-link">PIXI.Container</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BWebGL%5D%E5%88%9D%E8%AF%86PixiJS(%E4%B8%80).html#pixi-loader" class="sidebar-link">PIXI.loader</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BWebGL%5D%E5%88%9D%E8%AF%86PixiJS(%E4%B8%80).html#pixi-loader-resources" class="sidebar-link">PIXI.loader.resources</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5BWebGL%5D%E5%88%9D%E8%AF%86PixiJS(%E4%B8%80).html#pixi-sprite" class="sidebar-link">PIXI.Sprite</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-7c5ab02c data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>初识PixiJS(一)</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div data-v-5f3f4765><main class="page"><div class="page-title" style="display:none;"><h1>初识PixiJS(一)</h1> <hr> <div data-v-2c863f0e><i class="iconfont reco-account" data-v-2c863f0e><span data-v-2c863f0e>JyLie</span></i> <i class="iconfont reco-date" data-v-2c863f0e><span data-v-2c863f0e>2021-01-01</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c863f0e><span class="tag-item" data-v-2c863f0e>PixiJS</span></i></div></div> <div class="content__default"><h1 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h1> <p>记得第一次接触 PixiJS 是在 2020 年元旦，当时业务要求制作可定制类型海报生成器，考量了几个渲染引擎后决定使用 PixiJS 来实现。
+时隔多天后，觉得需要记录一下 PixiJS 方面的知识，供后续回顾与学习交流~。<a href="https://pixijs.download/release/docs/index.html" target="_blank" rel="noopener noreferrer">详细内容<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>可前往官网品阅。</p> <p>下面会从 PixiJS 是什么、为什么、怎么做的逻辑覆盖全文。</p> <ul><li>演示环境：
+<ul><li>PixiJS@4.5.5</li></ul></li></ul> <h1 id="pixijs-是什么"><a href="#pixijs-是什么" class="header-anchor">#</a> PixiJS 是什么</h1> <p>简而言之，PixiJS 是一个 最快最灵活的基于 HTML5 创建的 <code>2D Sprite 渲染引擎</code>。</p> <p>PixiJS 可以设置两种模式 <code>WebGL</code> 和 <code>Canvas</code> 来实现前端渲染，目前而言 Web 端对 <code>Canvas</code> 的兼容性比 <code>WebGL</code> 好得多， 如果想使用 <code>WebGL</code> 模式则要注意下运行终端是否涉及到传统浏览器，而且移动端的差异性也存在较大问题。</p> <p>使用渲染引擎通常需要接触到纹理、精灵、场景的组合使用，通常我们要预加载纹理为后续做准备，接着使用纹理来排列组合成不同的精灵、场景，一个小动画或一个小游戏也就此诞生了。</p> <p>PixiJS 提供了更好的性能和像素级效果，非常适合在线游戏、教育内容、交互式广告、数据可视化、动画等场景，合理的，整洁的 API 可以让你自由的使用，使其适应你的个人编码风格，并与其它框架无缝集成。</p> <h1 id="为什么使用-pixijs"><a href="#为什么使用-pixijs" class="header-anchor">#</a> 为什么使用 PixiJS</h1> <p>PixiJS 的最大优势在于它具有通用性：它的定位不是游戏引擎，而是一个渲染引擎。</p> <p>PixiJS 的主要优势：</p> <ul><li>非常轻量、快速</li> <li>便捷实现各种图形和精灵</li> <li>拥有两种渲染模式，其中 <code>WebGL</code> 极大的便捷用户操作 GPU 实现高效动画
+<ul><li><code>WebGL</code></li> <li><code>Canvas</code></li></ul></li> <li>可扩展性强，且各版本兼容
+<ul><li><a href="https://pixijs.download/release/docs/index.html" target="_blank" rel="noopener noreferrer">PixiJS 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul> <p>当然 PixiJS 也不是万能的，开发过程中会遇见各种各样的问题。</p> <p>PixiJS 的缺点如：</p> <ul><li>是一个 2D 引擎，不支持 3D 渲染</li> <li>PixiJS 能很好的实现移动端应用，但是如果想访问本机绑定，则需使用像 <code>Apache Cordova</code> 这样的部署系统。 且不提供对摄像头、定位服务、通知等的访问权限。</li> <li>PixiJS 是一个渲染引擎库，没有配套开箱即用的配套工具
+<ul><li>当然可以使用<a href="http://phaser.io/" target="_blank" rel="noopener noreferrer">基于 PixiJS 游戏框架 Phaser<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></li></ul> <h1 id="常用-api"><a href="#常用-api" class="header-anchor">#</a> 常用 API</h1> <p>在使用 PixiJS 前，先认识几个常用 API:</p> <h2 id="pixi-application"><a href="#pixi-application" class="header-anchor">#</a> PIXI.Application</h2> <p>可创建一个舞台，用于承载精灵及其动作实现。</p> <p>若要设置透明舞台需要设置 transparent 为 true</p> <h2 id="pixi-container"><a href="#pixi-container" class="header-anchor">#</a> PIXI.Container</h2> <p>可创建一个盒子，常用于存放系列精灵对象。</p> <h2 id="pixi-loader"><a href="#pixi-loader" class="header-anchor">#</a> PIXI.loader</h2> <p>可预加载纹理。</p> <h2 id="pixi-loader-resources"><a href="#pixi-loader-resources" class="header-anchor">#</a> PIXI.loader.resources</h2> <p>常用于访问已加载过的纹理。</p> <h2 id="pixi-sprite"><a href="#pixi-sprite" class="header-anchor">#</a> PIXI.Sprite</h2> <p>可创建精灵对象。</p> <h1 id="怎么样-使用-pixijs"><a href="#怎么样-使用-pixijs" class="header-anchor">#</a> 怎么样 使用 PixiJS</h1> <p>简单介绍完 PixiJS 后，接下要使用 <code>Hello World</code>大法了。</p> <p>🤳 吼吼哈嘿，看招~</p> <ul><li><code>Hello World</code>大法</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hello PixiJS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/pixi.js/4.5.5/pixi.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">let</span> type <span class="token operator">=</span> <span class="token string">'WebGL'</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token constant">PIXI</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">isWebGLSupported</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      type <span class="token operator">=</span> <span class="token string">'canvas'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token constant">PIXI</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Application</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">666</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">666</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">antialiasing</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">transparent</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">resolution</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// 创建文本</span>
+    <span class="token keyword">var</span> style <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>TextStyle</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">fontFamily</span><span class="token operator">:</span> <span class="token string">'Arial'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">fontSize</span><span class="token operator">:</span> <span class="token number">36</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">fontStyle</span><span class="token operator">:</span> <span class="token string">'italic'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">fontWeight</span><span class="token operator">:</span> <span class="token string">'bold'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">fill</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">'#ffffff'</span><span class="token punctuation">,</span> <span class="token string">'#00ff99'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// gradient</span>
+      <span class="token literal-property property">stroke</span><span class="token operator">:</span> <span class="token string">'#4a1850'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">strokeThickness</span><span class="token operator">:</span> <span class="token number">5</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">dropShadow</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">dropShadowColor</span><span class="token operator">:</span> <span class="token string">'#000000'</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">dropShadowBlur</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">dropShadowAngle</span><span class="token operator">:</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span> <span class="token operator">/</span> <span class="token number">6</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">dropShadowDistance</span><span class="token operator">:</span> <span class="token number">6</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">wordWrap</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">wordWrapWidth</span><span class="token operator">:</span> <span class="token number">440</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> richText <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Text</span><span class="token punctuation">(</span><span class="token string">'Hello PIXI MORE TIMES'</span><span class="token punctuation">,</span> style<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    richText<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">30</span><span class="token punctuation">;</span>
+    richText<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">180</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>richText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br></div></div><p data-height="300" data-default-tab="html,result" data-slug-hash="Exodzaq" data-user="liejiayong" class="codepen" style="height:300px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px solid;margin:1em 0;padding:1em;"><span>See the Pen <a href="https://codepen.io/liejiayong/pen/Exodzaq">
+  Hello PIXIJS</a> by stephen l (<a href="https://codepen.io/liejiayong">@liejiayong</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span></p> <script async="async" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> <ul><li><code>画个圈圈</code>大法</li></ul> <div class="language-html line-numbers-mode"><pre class="language-html"><code><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>utf-8<span class="token punctuation">&quot;</span></span> <span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hello PixiJS<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>https://cdn.bootcdn.net/ajax/libs/pixi.js/4.5.5/pixi.min.js<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    <span class="token keyword">let</span> type <span class="token operator">=</span> <span class="token string">'WebGL'</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token constant">PIXI</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">isWebGLSupported</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      type <span class="token operator">=</span> <span class="token string">'canvas'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token constant">PIXI</span><span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">sayHello</span><span class="token punctuation">(</span>type<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">let</span> app <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Application</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      <span class="token literal-property property">width</span><span class="token operator">:</span> <span class="token number">666</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">height</span><span class="token operator">:</span> <span class="token number">666</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">antialiasing</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">transparent</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+      <span class="token literal-property property">resolution</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    document<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>app<span class="token punctuation">.</span>view<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Circle</span>
+    <span class="token keyword">let</span> circle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    circle<span class="token punctuation">.</span><span class="token function">beginFill</span><span class="token punctuation">(</span><span class="token number">0x9966ff</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    circle<span class="token punctuation">.</span><span class="token function">drawCircle</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    circle<span class="token punctuation">.</span><span class="token function">endFill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    circle<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">64</span><span class="token punctuation">;</span>
+    circle<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">130</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>circle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Rectangle</span>
+    <span class="token keyword">let</span> rectangle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span><span class="token function">lineStyle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0xff3300</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span><span class="token function">beginFill</span><span class="token punctuation">(</span><span class="token number">0x66ccff</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span><span class="token function">drawRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">,</span> <span class="token number">64</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span><span class="token function">endFill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">170</span><span class="token punctuation">;</span>
+    rectangle<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">170</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>rectangle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Line</span>
+    <span class="token keyword">let</span> line <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">.</span><span class="token function">lineStyle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0xffffff</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">80</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">;</span>
+    line<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">32</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Ellipse</span>
+    <span class="token keyword">let</span> ellipse <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ellipse<span class="token punctuation">.</span><span class="token function">beginFill</span><span class="token punctuation">(</span><span class="token number">0xffff00</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ellipse<span class="token punctuation">.</span><span class="token function">drawEllipse</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ellipse<span class="token punctuation">.</span><span class="token function">endFill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    ellipse<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">180</span><span class="token punctuation">;</span>
+    ellipse<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">130</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>ellipse<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Triangle</span>
+    <span class="token keyword">let</span> triangle <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    triangle<span class="token punctuation">.</span><span class="token function">beginFill</span><span class="token punctuation">(</span><span class="token number">0x66ff33</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    triangle<span class="token punctuation">.</span><span class="token function">lineStyle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0x99ccff</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Use `drawPolygon` to define the triangle as an</span>
+    <span class="token comment">//array of x/y positions</span>
+
+    triangle<span class="token punctuation">.</span><span class="token function">drawPolygon</span><span class="token punctuation">(</span><span class="token punctuation">[</span>
+      <span class="token operator">-</span><span class="token number">32</span><span class="token punctuation">,</span>
+      <span class="token number">64</span><span class="token punctuation">,</span> <span class="token comment">//First point</span>
+      <span class="token number">32</span><span class="token punctuation">,</span>
+      <span class="token number">64</span><span class="token punctuation">,</span> <span class="token comment">//Second point</span>
+      <span class="token number">0</span><span class="token punctuation">,</span>
+      <span class="token number">0</span><span class="token punctuation">,</span> <span class="token comment">//Third point</span>
+    <span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    triangle<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    triangle<span class="token punctuation">.</span><span class="token function">endFill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">// Position the triangle after you've drawn it.</span>
+    <span class="token comment">// The triangle's x/y position is anchored to its first point in the path</span>
+    triangle<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">180</span><span class="token punctuation">;</span>
+    triangle<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">22</span><span class="token punctuation">;</span>
+
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>triangle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token comment">//Rounded rectangle</span>
+    <span class="token keyword">let</span> roundBox <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">PIXI<span class="token punctuation">.</span>Graphics</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span><span class="token function">lineStyle</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">0x99ccff</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span><span class="token function">beginFill</span><span class="token punctuation">(</span><span class="token number">0xff9933</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span><span class="token function">drawRoundedRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">84</span><span class="token punctuation">,</span> <span class="token number">36</span><span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span><span class="token function">endFill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span>x <span class="token operator">=</span> <span class="token number">48</span><span class="token punctuation">;</span>
+    roundBox<span class="token punctuation">.</span>y <span class="token operator">=</span> <span class="token number">190</span><span class="token punctuation">;</span>
+    app<span class="token punctuation">.</span>stage<span class="token punctuation">.</span><span class="token function">addChild</span><span class="token punctuation">(</span>roundBox<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br></div></div><p data-height="300" data-default-tab="html,result" data-slug-hash="wvpYbom" data-user="liejiayong" class="codepen" style="height:300px;box-sizing:border-box;display:flex;align-items:center;justify-content:center;border:2px solid;margin:1em 0;padding:1em;"><span>See the Pen <a href="https://codepen.io/liejiayong/pen/wvpYbom">
+  Pixi-画图形</a> by stephen l (<a href="https://codepen.io/liejiayong">@liejiayong</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span></p> <script async="async" src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script> <p>O(∩_∩)O 本文至此，创作不易，喜欢的请点个赞支持支持吧~</p> <h1 id="参考文献"><a href="#参考文献" class="header-anchor">#</a> 参考文献</h1> <ul><li><a href="https://pixijs.download/release/docs/index.html" target="_blank" rel="noopener noreferrer">PixiJS 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="http://phaser.io/" target="_blank" rel="noopener noreferrer">Phaser 官网<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li><a href="https://mp.weixin.qq.com/s?__biz=Mzg4NzI3MTg4Mw==&amp;mid=2247484039&amp;idx=1&amp;sn=bd09e67df2d286313d5201a081804260&amp;chksm=cf8dba23f8fa33356e1f2d5299c440c3b1a5056828472a37f6781ffd9bbf91fe60925c17c1e9&amp;=103795660&amp;=zh_CN#rd" target="_blank" rel="noopener noreferrer">初识 PixiJS(一)原文<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a936bdb4 data-v-a936bdb4><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a936bdb4><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a936bdb4></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a936bdb4></path></svg></div><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:130px;height:290px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="130" height="290" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:130px;height:290px;"></canvas></div></div></div>
+    <script src="/idea-domain/assets/js/app.89376c8e.js" defer></script><script src="/idea-domain/assets/js/4.5465c98c.js" defer></script><script src="/idea-domain/assets/js/1.4d4f02de.js" defer></script><script src="/idea-domain/assets/js/21.16413d4b.js" defer></script>
+  </body>
+</html>

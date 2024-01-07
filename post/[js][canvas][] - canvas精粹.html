@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>canvas 精粹 | JyLie</title>
+    <meta name="generator" content="VuePress 1.5.0">
+    <link rel="icon" href="/idea-domain/favicon.ico">
+    <meta name="description" content="Code my dream!">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <link rel="preload" href="/idea-domain/assets/css/0.styles.2c36a006.css" as="style"><link rel="preload" href="/idea-domain/assets/js/app.89376c8e.js" as="script"><link rel="preload" href="/idea-domain/assets/js/4.5465c98c.js" as="script"><link rel="preload" href="/idea-domain/assets/js/1.4d4f02de.js" as="script"><link rel="preload" href="/idea-domain/assets/js/47.46b7b146.js" as="script"><link rel="prefetch" href="/idea-domain/assets/js/10.a2352b9f.js"><link rel="prefetch" href="/idea-domain/assets/js/11.c25da6a4.js"><link rel="prefetch" href="/idea-domain/assets/js/12.4b9a78a0.js"><link rel="prefetch" href="/idea-domain/assets/js/13.4baadb5a.js"><link rel="prefetch" href="/idea-domain/assets/js/14.185a9a02.js"><link rel="prefetch" href="/idea-domain/assets/js/15.9636a8ca.js"><link rel="prefetch" href="/idea-domain/assets/js/16.679932b8.js"><link rel="prefetch" href="/idea-domain/assets/js/17.dd32ab06.js"><link rel="prefetch" href="/idea-domain/assets/js/18.32b1cf56.js"><link rel="prefetch" href="/idea-domain/assets/js/19.a56920af.js"><link rel="prefetch" href="/idea-domain/assets/js/20.438036b2.js"><link rel="prefetch" href="/idea-domain/assets/js/21.16413d4b.js"><link rel="prefetch" href="/idea-domain/assets/js/22.0e53dc4f.js"><link rel="prefetch" href="/idea-domain/assets/js/23.1fbc2526.js"><link rel="prefetch" href="/idea-domain/assets/js/24.84de9b18.js"><link rel="prefetch" href="/idea-domain/assets/js/25.d8f5fb42.js"><link rel="prefetch" href="/idea-domain/assets/js/26.08b284c3.js"><link rel="prefetch" href="/idea-domain/assets/js/27.fc88097b.js"><link rel="prefetch" href="/idea-domain/assets/js/28.0e86cd67.js"><link rel="prefetch" href="/idea-domain/assets/js/29.14a3a251.js"><link rel="prefetch" href="/idea-domain/assets/js/30.380fd044.js"><link rel="prefetch" href="/idea-domain/assets/js/31.2159b398.js"><link rel="prefetch" href="/idea-domain/assets/js/32.9fd1bac0.js"><link rel="prefetch" href="/idea-domain/assets/js/33.66deed1e.js"><link rel="prefetch" href="/idea-domain/assets/js/34.660bbe89.js"><link rel="prefetch" href="/idea-domain/assets/js/35.d6613fc9.js"><link rel="prefetch" href="/idea-domain/assets/js/36.5debaab7.js"><link rel="prefetch" href="/idea-domain/assets/js/37.baea05f8.js"><link rel="prefetch" href="/idea-domain/assets/js/38.b12b93d9.js"><link rel="prefetch" href="/idea-domain/assets/js/39.881b30e0.js"><link rel="prefetch" href="/idea-domain/assets/js/40.c5906ef8.js"><link rel="prefetch" href="/idea-domain/assets/js/41.314b3f1d.js"><link rel="prefetch" href="/idea-domain/assets/js/42.b3e6177b.js"><link rel="prefetch" href="/idea-domain/assets/js/43.05e57135.js"><link rel="prefetch" href="/idea-domain/assets/js/44.decce320.js"><link rel="prefetch" href="/idea-domain/assets/js/45.92f9fb7a.js"><link rel="prefetch" href="/idea-domain/assets/js/46.d9fd684f.js"><link rel="prefetch" href="/idea-domain/assets/js/48.4ac11cbd.js"><link rel="prefetch" href="/idea-domain/assets/js/49.73378ba2.js"><link rel="prefetch" href="/idea-domain/assets/js/5.0b75201a.js"><link rel="prefetch" href="/idea-domain/assets/js/50.1a6b9738.js"><link rel="prefetch" href="/idea-domain/assets/js/51.70dbe9ec.js"><link rel="prefetch" href="/idea-domain/assets/js/52.1743641c.js"><link rel="prefetch" href="/idea-domain/assets/js/53.88c57e85.js"><link rel="prefetch" href="/idea-domain/assets/js/54.8df6ccd2.js"><link rel="prefetch" href="/idea-domain/assets/js/55.7958b607.js"><link rel="prefetch" href="/idea-domain/assets/js/56.cfd57e97.js"><link rel="prefetch" href="/idea-domain/assets/js/57.156cd233.js"><link rel="prefetch" href="/idea-domain/assets/js/58.197d2a8c.js"><link rel="prefetch" href="/idea-domain/assets/js/59.d7a72db1.js"><link rel="prefetch" href="/idea-domain/assets/js/6.1d6b63a7.js"><link rel="prefetch" href="/idea-domain/assets/js/60.c62a4d78.js"><link rel="prefetch" href="/idea-domain/assets/js/61.949370dd.js"><link rel="prefetch" href="/idea-domain/assets/js/62.23a941cc.js"><link rel="prefetch" href="/idea-domain/assets/js/63.65d4a7fe.js"><link rel="prefetch" href="/idea-domain/assets/js/64.7ac5ce1f.js"><link rel="prefetch" href="/idea-domain/assets/js/65.06b31195.js"><link rel="prefetch" href="/idea-domain/assets/js/66.0502d679.js"><link rel="prefetch" href="/idea-domain/assets/js/67.8933a0d7.js"><link rel="prefetch" href="/idea-domain/assets/js/68.b5952168.js"><link rel="prefetch" href="/idea-domain/assets/js/69.5e2c7b6f.js"><link rel="prefetch" href="/idea-domain/assets/js/7.915bfa51.js"><link rel="prefetch" href="/idea-domain/assets/js/70.b1e5fa24.js"><link rel="prefetch" href="/idea-domain/assets/js/71.1f97cb34.js"><link rel="prefetch" href="/idea-domain/assets/js/72.de33eb9f.js"><link rel="prefetch" href="/idea-domain/assets/js/73.b6026198.js"><link rel="prefetch" href="/idea-domain/assets/js/74.36040e8e.js"><link rel="prefetch" href="/idea-domain/assets/js/75.b1ee04bd.js"><link rel="prefetch" href="/idea-domain/assets/js/76.674f3bcb.js"><link rel="prefetch" href="/idea-domain/assets/js/77.2e8d78eb.js"><link rel="prefetch" href="/idea-domain/assets/js/78.6be64fef.js"><link rel="prefetch" href="/idea-domain/assets/js/79.9b118866.js"><link rel="prefetch" href="/idea-domain/assets/js/8.189eb478.js"><link rel="prefetch" href="/idea-domain/assets/js/80.85bb9d6a.js"><link rel="prefetch" href="/idea-domain/assets/js/81.0dab5b76.js"><link rel="prefetch" href="/idea-domain/assets/js/82.428c38c7.js"><link rel="prefetch" href="/idea-domain/assets/js/83.d4455b9e.js"><link rel="prefetch" href="/idea-domain/assets/js/84.02a939e7.js"><link rel="prefetch" href="/idea-domain/assets/js/85.ed694f58.js"><link rel="prefetch" href="/idea-domain/assets/js/86.eeda91b2.js"><link rel="prefetch" href="/idea-domain/assets/js/87.afb850a1.js"><link rel="prefetch" href="/idea-domain/assets/js/9.db2c446c.js"><link rel="prefetch" href="/idea-domain/assets/js/vendors~flowchart.567eafbc.js">
+    <link rel="stylesheet" href="/idea-domain/assets/css/0.styles.2c36a006.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container" data-v-5f3f4765><div data-v-5f3f4765><div id="loader-wrapper" class="loading-wrapper" data-v-164600bd data-v-5f3f4765 data-v-5f3f4765><div class="loader-main" data-v-164600bd><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div><div data-v-164600bd></div></div> <!----> <!----></div> <div class="password-shadow password-wrapper-out" style="display:none;" data-v-7c5ab02c data-v-5f3f4765 data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>JyLie</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div class="hide" data-v-5f3f4765><header class="navbar" data-v-5f3f4765><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/idea-domain/" class="home-link router-link-active"><!----> <span class="site-name">JyLie</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-5f3f4765></div> <aside class="sidebar" data-v-5f3f4765><div class="personal-info-wrapper" data-v-a30e08ee><img src="/idea-domain/avatar.jpg" alt="author-avatar" class="personal-img" data-v-a30e08ee> <h3 class="name" data-v-a30e08ee>
+    JyLie
+  </h3> <div class="num" data-v-a30e08ee><div data-v-a30e08ee><h3 data-v-a30e08ee>74</h3> <h6 data-v-a30e08ee>Article</h6></div> <div data-v-a30e08ee><h3 data-v-a30e08ee>79</h3> <h6 data-v-a30e08ee>Tag</h6></div></div> <hr data-v-a30e08ee></div> <nav class="nav-links"><div class="nav-item"><a href="/idea-domain/" class="nav-link"><i class="iconfont reco-home"></i>
+  主页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      分类
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/idea-domain/categories/API/" class="nav-link"><i class="iconfont undefined"></i>
+  API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/HTML/" class="nav-link"><i class="iconfont undefined"></i>
+  HTML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/css/" class="nav-link"><i class="iconfont undefined"></i>
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vue/" class="nav-link"><i class="iconfont undefined"></i>
+  vue
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Linux/" class="nav-link"><i class="iconfont undefined"></i>
+  Linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Docker/" class="nav-link"><i class="iconfont undefined"></i>
+  Docker
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Webpack/" class="nav-link"><i class="iconfont undefined"></i>
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebGL/" class="nav-link"><i class="iconfont undefined"></i>
+  WebGL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/PixiJS/" class="nav-link"><i class="iconfont undefined"></i>
+  PixiJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Github/" class="nav-link"><i class="iconfont undefined"></i>
+  Github
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/BOM/" class="nav-link"><i class="iconfont undefined"></i>
+  BOM
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/XML/" class="nav-link"><i class="iconfont undefined"></i>
+  XML
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bug/" class="nav-link"><i class="iconfont undefined"></i>
+  bug
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ie/" class="nav-link"><i class="iconfont undefined"></i>
+  ie
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/uniapp/" class="nav-link"><i class="iconfont undefined"></i>
+  uniapp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IE/" class="nav-link"><i class="iconfont undefined"></i>
+  IE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/mysql/" class="nav-link"><i class="iconfont undefined"></i>
+  mysql
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/font/" class="nav-link"><i class="iconfont undefined"></i>
+  font
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/bom/" class="nav-link"><i class="iconfont undefined"></i>
+  bom
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/canvas/" class="nav-link"><i class="iconfont undefined"></i>
+  canvas
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/video/" class="nav-link"><i class="iconfont undefined"></i>
+  video
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/html/" class="nav-link"><i class="iconfont undefined"></i>
+  html
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/JavaScript/" class="nav-link"><i class="iconfont undefined"></i>
+  JavaScript
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/js/" class="nav-link"><i class="iconfont undefined"></i>
+  js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/运算符/" class="nav-link"><i class="iconfont undefined"></i>
+  运算符
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/RegExp/" class="nav-link"><i class="iconfont undefined"></i>
+  RegExp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/编码/" class="nav-link"><i class="iconfont undefined"></i>
+  编码
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/MiniApp/" class="nav-link"><i class="iconfont undefined"></i>
+  MiniApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nginx/" class="nav-link"><i class="iconfont undefined"></i>
+  nginx
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Tool/" class="nav-link"><i class="iconfont undefined"></i>
+  Tool
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/node.js/" class="nav-link"><i class="iconfont undefined"></i>
+  node.js
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/cat/" class="nav-link"><i class="iconfont undefined"></i>
+  cat
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/nodejs/" class="nav-link"><i class="iconfont undefined"></i>
+  nodejs
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/URL/" class="nav-link"><i class="iconfont undefined"></i>
+  URL
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/FLOW/" class="nav-link"><i class="iconfont undefined"></i>
+  FLOW
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/DNS/" class="nav-link"><i class="iconfont undefined"></i>
+  DNS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Protocol/" class="nav-link"><i class="iconfont undefined"></i>
+  Protocol
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/python/" class="nav-link"><i class="iconfont undefined"></i>
+  python
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/安全/" class="nav-link"><i class="iconfont undefined"></i>
+  安全
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/linux/" class="nav-link"><i class="iconfont undefined"></i>
+  linux
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/shell/" class="nav-link"><i class="iconfont undefined"></i>
+  shell
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/IDE/" class="nav-link"><i class="iconfont undefined"></i>
+  IDE
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Packer/" class="nav-link"><i class="iconfont undefined"></i>
+  Packer
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/ViteJS/" class="nav-link"><i class="iconfont undefined"></i>
+  ViteJS
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/git/" class="nav-link"><i class="iconfont undefined"></i>
+  git
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/vendor/" class="nav-link"><i class="iconfont undefined"></i>
+  vendor
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebApp/" class="nav-link"><i class="iconfont undefined"></i>
+  WebApp
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/WebView/" class="nav-link"><i class="iconfont undefined"></i>
+  WebView
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/Window API/" class="nav-link"><i class="iconfont undefined"></i>
+  Window API
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/webview/" class="nav-link"><i class="iconfont undefined"></i>
+  webview
+</a></li><li class="dropdown-item"><!----> <a href="/idea-domain/categories/规范/" class="nav-link"><i class="iconfont undefined"></i>
+  规范
+</a></li></ul></div></div><div class="nav-item"><a href="/idea-domain/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  标签
+</a></div><div class="nav-item"><a href="/idea-domain/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  时光轴
+</a></div><div class="nav-item"><a href="https://github.com/liejiayong" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>canvas 精粹</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#canvas-基础" class="sidebar-link">canvas 基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#常用-api：" class="sidebar-link">常用 API：</a></li></ul></li><li><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#画柔顺线条" class="sidebar-link">画柔顺线条</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#retina-高清显示方案" class="sidebar-link">retina 高清显示方案</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#canvas-自适应缩放逻辑" class="sidebar-link">canvas 自适应缩放逻辑</a></li></ul></li><li><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#跨域" class="sidebar-link">跨域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#node-跨域允许" class="sidebar-link">node 跨域允许</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#php-跨域允许" class="sidebar-link">php 跨域允许</a></li><li class="sidebar-sub-header"><a href="/idea-domain/post/%5Bjs%5D%5Bcanvas%5D%5B%5D%20-%20canvas%E7%B2%BE%E7%B2%B9.html#java-跨域允许" class="sidebar-link">java 跨域允许</a></li></ul></li></ul></section></li></ul> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-7c5ab02c data-v-5f3f4765><h3 class="title" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c>canvas 精粹</h3> <!----> <label id="box" class="inputBox" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><input type="password" value="" data-v-7c5ab02c> <span data-v-7c5ab02c>Konck! Knock!</span> <button data-v-7c5ab02c>OK</button></label> <div class="footer" style="display:none;" data-v-7c5ab02c data-v-7c5ab02c><span data-v-7c5ab02c><i class="iconfont reco-theme" data-v-7c5ab02c></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-7c5ab02c>vuePress-theme-reco</a></span> <span data-v-7c5ab02c><i class="iconfont reco-copyright" data-v-7c5ab02c></i> <a data-v-7c5ab02c><span data-v-7c5ab02c>JyLie</span>
+            
+          <span data-v-7c5ab02c>2017 - </span>
+          2023
+        </a></span></div></div> <div data-v-5f3f4765><main class="page"><div class="page-title" style="display:none;"><h1>canvas 精粹</h1> <hr> <div data-v-2c863f0e><i class="iconfont reco-account" data-v-2c863f0e><span data-v-2c863f0e>JyLie</span></i> <i class="iconfont reco-date" data-v-2c863f0e><span data-v-2c863f0e>2019-01-08</span></i> <!----> <i class="iconfont reco-tag tags" data-v-2c863f0e><span class="tag-item" data-v-2c863f0e>canvas</span></i></div></div> <div class="theme-reco-content content__default" style="display:none;"><blockquote><p>持续更新...</p></blockquote> <h2 id="canvas-基础"><a href="#canvas-基础" class="header-anchor">#</a> canvas 基础</h2> <ul><li>canvas 元素绘图表面（drawimg surface）的 width、height 才是用于画布实际大小；</li> <li>canvas 元素通过 css 设置的 width、height 只是设置了元素本身大小，不是 canvas 元素绘图表面（drawimg surface）大小，默认为 300x150；</li> <li>canvas 执行环境画布的 width、height 不设置时，会自动跟随元素 width、height 自动缩放，因此需要手动设置画布 width、heigth；</li> <li>兼容性：ie9 以上及现代浏览器</li></ul> <h3 id="常用-api："><a href="#常用-api：" class="header-anchor">#</a> 常用 API：</h3> <h4 id="htmlcanvaselement-todataurl-type-encoderoptions"><a href="#htmlcanvaselement-todataurl-type-encoderoptions" class="header-anchor">#</a> HTMLCanvasElement.toDataURL(type, encoderOptions)</h4> <p>返回一个包含图片展示的 data URI</p> <blockquote><p>本方法在导出图片前会检查在 canvas 上的图片源 Image，若图片源 Image 不设置 Image.setAttribute('crossOrigin', 'Anonymous');则会爆出跨域错误：</p></blockquote> <ul><li><strong>Tainted canvases may not be exported</strong></li></ul> <p>若设置 crossOrigin 后, 图片无法显示并且爆出错误<strong>CORS policy</strong></p> <p>则需要在图片源设置的时候加时间戳清除缓存，并且在后端 header 设置跨域：Access-Control-Allow-Origin: '* '</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'./win.png?timestamp='</span> <span class="token operator">+</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'crossOrigin'</span><span class="token punctuation">,</span> <span class="token string">'Anonymous'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h4 id="canvas-getboundingclientrect"><a href="#canvas-getboundingclientrect" class="header-anchor">#</a> canvas.getBoundingClientRect()</h4> <p>获得 canvase 画布边框信息，包括画布离浏览器的 top、left</p> <h4 id="beginpath"><a href="#beginpath" class="header-anchor">#</a> beginPath()</h4> <p>新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。</p> <h4 id="closepath"><a href="#closepath" class="header-anchor">#</a> closePath()</h4> <p>闭合路径之后图形绘制命令又重新指向到上下文中。</p> <h4 id="stroke"><a href="#stroke" class="header-anchor">#</a> stroke()</h4> <p>通过线条来绘制图形轮廓。</p> <h4 id="fill"><a href="#fill" class="header-anchor">#</a> fill()</h4> <p>通过填充路径的内容区域生成实心的图形。</p> <h4 id="save"><a href="#save" class="header-anchor">#</a> save()</h4> <p>将当前 canvas 的状态（左边变换信息（transformation）、剪辑区域（clipping region）、属性（fillStyle、globalCompositeOperation 等））push 到堆栈顶部，相当于保存局部属性变量</p> <h4 id="restore"><a href="#restore" class="header-anchor">#</a> restore()</h4> <p>将 canvas 堆栈顶部的状态 pop 出来，相当于回复默认属性变量</p> <blockquote><p>值得注意的是，在每次 fill()和 stroke()时必须设置样式、线宽等</p></blockquote> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">// 填充三角形</span>
+<span class="token comment">// 路径使用填充（filled）时，路径自动闭合</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">105</span><span class="token punctuation">,</span> <span class="token number">25</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">25</span><span class="token punctuation">,</span> <span class="token number">105</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineCap <span class="token operator">=</span> <span class="token string">'round'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineJoin <span class="token operator">=</span> <span class="token string">'round'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> <span class="token string">'#ff0000'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// 描边三角形</span>
+<span class="token comment">// 路径使用填充（filled）时，路径自动闭合 使用描边（stroked）则不会闭合路径</span>
+ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">125</span><span class="token punctuation">,</span> <span class="token number">45</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span><span class="token number">45</span><span class="token punctuation">,</span> <span class="token number">125</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineCap <span class="token operator">=</span> <span class="token string">'round'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineJoin <span class="token operator">=</span> <span class="token string">'round'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>strokeStyle <span class="token operator">=</span> <span class="token string">'#ff0000'</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span>lineWidth <span class="token operator">=</span> <span class="token number">8</span><span class="token punctuation">;</span>
+ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h2 id="画柔顺线条"><a href="#画柔顺线条" class="header-anchor">#</a> 画柔顺线条</h2> <p>在画柔顺线条的时候，需要注意 lintTo 的时候位置复位</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> point <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">prevX</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">prevY</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">tap</span><span class="token operator">:</span> <span class="token boolean">false</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token keyword">function</span> <span class="token function">getPosition</span><span class="token punctuation">(</span><span class="token parameter">touches</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>touches <span class="token operator">||</span> <span class="token punctuation">(</span>touches <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>touches<span class="token punctuation">.</span>clientX<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token punctuation">{</span> <span class="token literal-property property">x</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">y</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token literal-property property">radius</span><span class="token operator">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> bc <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getBoundingClientRect</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">let</span> x <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>touches<span class="token punctuation">.</span>clientX <span class="token operator">-</span> bc<span class="token punctuation">.</span>left<span class="token punctuation">)</span><span class="token punctuation">,</span>
+    y <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">abs</span><span class="token punctuation">(</span>touches<span class="token punctuation">.</span>clientY <span class="token operator">-</span> bc<span class="token punctuation">.</span>top<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  x <span class="token operator">=</span> x<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  y <span class="token operator">=</span> y<span class="token punctuation">.</span><span class="token function">toFixed</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>point<span class="token punctuation">.</span>tap<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    point<span class="token punctuation">.</span>prevX <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    point<span class="token punctuation">.</span>prevY <span class="token operator">=</span> y<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// console.log(touches, x, y)</span>
+
+  <span class="token keyword">return</span> <span class="token punctuation">{</span> x<span class="token punctuation">,</span> y <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+canvas<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'touchstart'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  point<span class="token punctuation">.</span>tap <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> pos <span class="token operator">=</span> <span class="token function">getPosition</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  point<span class="token punctuation">.</span>x <span class="token operator">=</span> pos<span class="token punctuation">.</span>x<span class="token punctuation">;</span>
+  point<span class="token punctuation">.</span>y <span class="token operator">=</span> pos<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+canvas<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span>
+  <span class="token string">'touchmove'</span><span class="token punctuation">,</span>
+  <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>tap<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> pos <span class="token operator">=</span> t<span class="token punctuation">.</span><span class="token function">getPos</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>touches<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      x <span class="token operator">=</span> pos<span class="token punctuation">.</span>x<span class="token punctuation">,</span>
+      y <span class="token operator">=</span> pos<span class="token punctuation">.</span>y<span class="token punctuation">;</span>
+
+    ctx<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 开始新的路径</span>
+    ctx<span class="token punctuation">.</span><span class="token function">moveTo</span><span class="token punctuation">(</span>point<span class="token punctuation">.</span>prevX<span class="token punctuation">,</span> point<span class="token punctuation">.</span>prevY<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 复位到最后一个像素点</span>
+    ctx<span class="token punctuation">.</span><span class="token function">lineTo</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span> y<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 画像素点</span>
+
+    ctx<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 关闭路径</span>
+    ctx<span class="token punctuation">.</span><span class="token function">stroke</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// 画线条</span>
+
+    point<span class="token punctuation">.</span>prevX <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    point<span class="token punctuation">.</span>prevY <span class="token operator">=</span> y<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token boolean">false</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br></div></div><h2 id="retina-高清显示方案"><a href="#retina-高清显示方案" class="header-anchor">#</a> retina 高清显示方案</h2> <p>高清显示主要作用于类似移动端的高清屏，在描绘文字 或 描绘图片时，由于终端物理像素\设备像素（DP）与 css 像素的倍率差异，因此在初始化 canvas 画布时，要通过设置 canvas 的绘图表面与 canvas 的元素大小比例来完成倍率缩放。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>科普：
+DP(device pixels): 物理像素\设备像素。显示屏是由一个个物理像素点组成的，通过控制每个像素点的颜色，使屏幕显示出不同的图像，屏幕从工厂出来那天起，它上面的物理像素点就固定不变了，单位pt。
+
+DPR：设备像素比。 描述的是未缩放状态下，物理像素和CSS像素的初始比例关系。
+
+DIP(Device independent Pixel)：设备独立像素，也称为逻辑像素，简称dip。
+
+DPR = DP/CSS像素
+
+CSS像素 = 设备独立像素 = 逻辑像素
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><h3 id="canvas-自适应缩放逻辑"><a href="#canvas-自适应缩放逻辑" class="header-anchor">#</a> canvas 自适应缩放逻辑</h3> <p>获取设备终端画布的像素比例 backingStorePixelRatio，</p> <p>将 canvas 元素绘图表面的 width 与 height 设置为缩放后的数值 width<em>backingStorePixelRatio、height</em>backingStorePixelRatio</p> <p>将 canvas 的 css 设置的 width、height 设置为设计稿实际尺寸</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> canvasRatio <span class="token operator">=</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 获取像素比</span>
+  <span class="token function-variable function">getPixelRatio</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">context</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> backingStore <span class="token operator">=</span>
+      context<span class="token punctuation">.</span>backingStorePixelRatio <span class="token operator">||</span>
+      context<span class="token punctuation">.</span>webkitBackingStorePixelRatio <span class="token operator">||</span>
+      context<span class="token punctuation">.</span>mozBackingStorePixelRatio <span class="token operator">||</span>
+      context<span class="token punctuation">.</span>msBackingStorePixelRatio <span class="token operator">||</span>
+      context<span class="token punctuation">.</span>oBackingStorePixelRatio <span class="token operator">||</span>
+      context<span class="token punctuation">.</span>backingStorePixelRatio <span class="token operator">||</span>
+      <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>devicePixelRatio <span class="token operator">||</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">/</span> backingStore
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">clientWidth</span><span class="token operator">:</span> window<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>availWidth<span class="token punctuation">,</span>
+  <span class="token literal-property property">clientHeight</span><span class="token operator">:</span> window<span class="token punctuation">.</span>screen<span class="token punctuation">.</span>availWidth<span class="token punctuation">,</span>
+  <span class="token literal-property property">designW</span><span class="token operator">:</span> <span class="token number">750</span><span class="token punctuation">,</span>
+  <span class="token literal-property property">designH</span><span class="token operator">:</span> <span class="token number">1500</span><span class="token punctuation">,</span>
+  <span class="token function-variable function">init</span><span class="token operator">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">el</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> canvas <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">&quot;#gStage&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      ctx <span class="token operator">=</span> canvas<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">&quot;2d&quot;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      ratio <span class="token operator">=</span> <span class="token function">getPixelRatio</span><span class="token punctuation">(</span>ctx<span class="token punctuation">)</span>
+    ctx<span class="token punctuation">.</span><span class="token function">scale</span><span class="token punctuation">(</span>ratio<span class="token punctuation">,</span> ratio<span class="token punctuation">)</span>
+    canvas<span class="token punctuation">.</span>width <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>designW <span class="token operator">*</span> ratio
+    canvas<span class="token punctuation">.</span>height <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>designH <span class="token operator">*</span> ratio
+    el<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>canvas<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>ctx <span class="token operator">=</span> ctx
+    <span class="token keyword">this</span><span class="token punctuation">.</span>canvas <span class="token operator">=</span> canvas
+    <span class="token keyword">this</span><span class="token punctuation">.</span>ratio <span class="token operator">=</span> ratio
+  <span class="token punctuation">}</span>
+  canvasRatio<span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br></div></div><h2 id="跨域"><a href="#跨域" class="header-anchor">#</a> 跨域</h2> <p>跨域问题归根于浏览器同源策略导致的，浏览器为了保证用户信息的安全，防止恶意的网站窃取数据。默认不允许跨域情景。</p> <p>同源策略是浏览器的一个安全功能，不同源的客户端脚本(js 文件)在没有明确授权的情况下，不能读写对方资源。只有同一个源的脚本赋予 dom、读写 cookie、session、ajax 等操作的权限。</p> <p>在实际开发中，canvas 开发经常会碰到跨域问题，因为更多时候线上图片是调用域外的，因此我们要做好跨域设置。</p> <p>在调用域外图片时，若后端服务器没有设置允许跨域 Access-Control-Allow-Origin: '* '，浏览器则会显示报错：</p> <blockquote><p>xxx' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.</p></blockquote> <p>解决方法是在对应的服务器上设置跨域允许，如下：</p> <h3 id="node-跨域允许"><a href="#node-跨域允许" class="header-anchor">#</a> node 跨域允许</h3> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token comment">//设置请求头</span>
+app<span class="token punctuation">.</span><span class="token function">all</span><span class="token punctuation">(</span><span class="token string">'*'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">req<span class="token punctuation">,</span> res<span class="token punctuation">,</span> next</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">//允许所有来源访问</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Origin'</span><span class="token punctuation">,</span> <span class="token string">'*'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//用于判断request来自ajax还是传统请求</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Headers'</span><span class="token punctuation">,</span> <span class="token string">'X-Requested-With'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//允许访问的方式</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Access-Control-Allow-Methods'</span><span class="token punctuation">,</span> <span class="token string">'PUT,POST,GET,DELETE,OPTIONS'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//修改程序信息与版本</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'X-Powered-By'</span><span class="token punctuation">,</span> <span class="token string">' 3.2.1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment">//内容类型：如果是post请求必须指定这个属性</span>
+  res<span class="token punctuation">.</span><span class="token function">header</span><span class="token punctuation">(</span><span class="token string">'Content-Type'</span><span class="token punctuation">,</span> <span class="token string">'application/json;charset=utf-8'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><h3 id="php-跨域允许"><a href="#php-跨域允许" class="header-anchor">#</a> php 跨域允许</h3> <div class="language-php line-numbers-mode"><pre class="language-php"><code><span class="token comment">//方式一：</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;Access-Control-Allow-Origin: *&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//允许所有地址跨域请求</span>
+
+<span class="token comment">//方式二：</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;Access-Control-Allow-Origin: http://localhost:8080&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//指定某个地址可以跨域请求，这里只能指定一个</span>
+
+<span class="token comment">//方式三：如果要允许多个地址跨域请求可以这样写</span>
+<span class="token variable">$origin</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string single-quoted-string">'http://localhost:8080'</span><span class="token punctuation">,</span><span class="token string single-quoted-string">'http://localhost:8081'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$AllowOrigin</span> <span class="token operator">=</span> <span class="token string single-quoted-string">'http://localhost:8080'</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">in_array</span><span class="token punctuation">(</span><span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;HTTP_ORIGIN&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token variable">$origin</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token variable">$AllowOrigin</span> <span class="token operator">=</span> <span class="token variable">$_SERVER</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;HTTP_ORIGIN&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;Access-Control-Allow-Origin: &quot;</span><span class="token operator">.</span><span class="token variable">$AllowOrigin</span> <span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//设置允许的请求方法，可以用*表示所有，</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string double-quoted-string">&quot;Access-Control-Allow-Methods: POST&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//如果允许请求携带cookie，此时 origin配置不能用 *，此时前端似乎也要做配置，让请求中携带cookie</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Access-Control-Allow-Credentials:true'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">//设置允许跨域的请求头，通常会在请求头里面加登录验证信息，那么服务端需要指定允许那些请求头，这里不能用*，多个字段用逗号隔开。</span>
+<span class="token function">header</span><span class="token punctuation">(</span><span class="token string single-quoted-string">'Access-Control-Allow-Headers:token'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br></div></div><h3 id="java-跨域允许"><a href="#java-跨域允许" class="header-anchor">#</a> java 跨域允许</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token annotation punctuation">@WebFilter</span><span class="token punctuation">(</span><span class="token string">&quot;/*&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">CORSFilter</span> <span class="token keyword">implements</span> <span class="token class-name">Filter</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">CORSFilter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">destroy</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">doFilter</span><span class="token punctuation">(</span><span class="token class-name">ServletRequest</span> req<span class="token punctuation">,</span> <span class="token class-name">ServletResponse</span> res<span class="token punctuation">,</span> <span class="token class-name">FilterChain</span> chain<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">IOException</span><span class="token punctuation">,</span> <span class="token class-name">ServletException</span> <span class="token punctuation">{</span>
+        <span class="token comment">//设置跨域请求</span>
+        <span class="token class-name">HttpServletRequest</span> request <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">HttpServletRequest</span><span class="token punctuation">)</span> req<span class="token punctuation">;</span>
+        <span class="token class-name">HttpServletResponse</span> response <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token class-name">HttpServletResponse</span><span class="token punctuation">)</span> res<span class="token punctuation">;</span>
+        <span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> allowDomains <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">&quot;http://www域名1&quot;</span><span class="token punctuation">,</span>http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www域名<span class="token number">2</span>&quot;<span class="token punctuation">}</span><span class="token punctuation">;</span>
+        <span class="token class-name">Set</span> allowOrigins <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">HashSet</span><span class="token punctuation">(</span><span class="token class-name">Arrays</span><span class="token punctuation">.</span><span class="token function">asList</span><span class="token punctuation">(</span>allowDomains<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name">String</span> originHeads <span class="token operator">=</span> request<span class="token punctuation">.</span><span class="token function">getHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Origin&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>allowOrigins<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span>originHeads<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Access-Control-Allow-Origin&quot;</span><span class="token punctuation">,</span> originHeads<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Access-Control-Allow-Methods&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;POST,GET,OPTIONS,DELETE,HEAD,PUT,PATCH&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Access-Control-Max-Age&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;36000&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Access-Control-Allow-Headers&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Origin, X-Requested-With, Content-Type, Accept,Authorization,authorization&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            response<span class="token punctuation">.</span><span class="token function">setHeader</span><span class="token punctuation">(</span><span class="token string">&quot;Access-Control-Allow-Credentials&quot;</span><span class="token punctuation">,</span><span class="token string">&quot;true&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        chain<span class="token punctuation">.</span><span class="token function">doFilter</span><span class="token punctuation">(</span>req<span class="token punctuation">,</span> response<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token class-name">FilterConfig</span> fConfig<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">ServletException</span> <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br></div></div><p>服务端设置好跨域允许后，第一波搞定，下面的问题都可以交给前端了。</p> <p>当使用 canvas 开发时，浏览器仍然是允许你将域外图片绘制到画板 canvas 上的，但是 toDataURL 就会报错（toBlob 也是）：</p> <blockquote><p>Failed to execute 'toDataURL' on 'HTMLCanvasElement': Tainted canvases may not be exported.</p></blockquote> <p>为什么会这样呢？</p> <p>官方给出的解析是：This protects users from having private data exposed by using images to pull information from remote web sites without permission.</p> <p>大意就是说：如果你请求外域的图片 without permission，可能会暴露你的隐私数据，所以浏览器为了保护你的隐私会限制这样的请求。</p> <p>「why?请求外域图片怎么就会暴露我的隐私数据了？」其实我也不明白，这个坑请先自己填一下，之后会补充，先接触 Tainted canvases 的问题。</p> <p>解决办法： 设置 Image.setAttribute('crossOrigin', 'anonymous')来告诉浏览器，我允许跨域！</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'./win.png'</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'crossorigin'</span><span class="token punctuation">,</span> <span class="token string">'anonymous'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>**图片添加了 setAttribute(&quot;crossOrigin&quot;, &quot;Anonymous&quot;)，实际就是图片请求变成了 CORS 请求，就要受同源策略的限制了，图片源请求 request header 上就会自动添加 Origin 与 referer 并设置图片源出处地址 ** ， 如下：</p> <div class="language-http line-numbers-mode"><pre class="language-http"><code>
+<span class="token header"><span class="token header-name keyword">Referer</span><span class="token punctuation">:</span> <span class="token header-value">http://hd.693975.com/huodong/2020identity/</span></span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>跨域到这里基本问题也要解决了，然鹅有时候为了网站相应性能，开发者喜欢将域外图片放在 cdn 的域外，像这种高缓存高性能的巨无霸，若前端对频发更新的图片画在 canvas，那么只能骚一波，消除缓存，给图片源添加时间戳即可，如下：</p> <div class="language-js line-numbers-mode"><pre class="language-js"><code><span class="token keyword">var</span> img <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Image</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span>src <span class="token operator">=</span> <span class="token string">'./win.png?timestamp='</span> <span class="token operator">+</span> Date<span class="token punctuation">.</span><span class="token function">now</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">'crossorigin'</span><span class="token punctuation">,</span> <span class="token string">'anonymous'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+img<span class="token punctuation">.</span><span class="token function-variable function">onload</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div></div> <footer class="page-edit" style="display:none;"><!----> <!----></footer> <!----> <!----></main> <!----></div></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-a936bdb4 data-v-a936bdb4><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-a936bdb4><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-a936bdb4></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-a936bdb4></path></svg></div><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:130px;height:290px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="130" height="290" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:130px;height:290px;"></canvas></div></div></div>
+    <script src="/idea-domain/assets/js/app.89376c8e.js" defer></script><script src="/idea-domain/assets/js/4.5465c98c.js" defer></script><script src="/idea-domain/assets/js/1.4d4f02de.js" defer></script><script src="/idea-domain/assets/js/47.46b7b146.js" defer></script>
+  </body>
+</html>
